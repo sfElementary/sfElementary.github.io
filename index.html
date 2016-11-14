@@ -1,3 +1,97 @@
+<html>
+<head>
+  <title>A Leaflet map!</title>
+  
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  <link rel="stylesheet" href="MarkerCluster.css"/>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src="leaflet.markercluster.js"></script>
+
+  <script src="jquery-2.1.1.min.js"></script>
+  <script src="leaflet-messagebox-master/leaflet-messagebox.js"></script>
+  <style>
+    #map{ height: 100% }
+  </style>
+</head>
 <body>
-hello!
+
+  <div id="map"></div>
+
+  <script>
+
+  // initialize the map
+  //var map = L.map('map').setView([42.35, -71.08], 13); //Boston
+/* var southWest = L.latLng(37.6982268,-122.5239693,
+    northEast = L.latLng(37.8203137,-122.3841439),
+    bounds = L.latLngBounds(southWest, northEast);
+    */
+
+
+var map = L.map('map').setView([37.74, -122.41], 14);
+
+
+
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([37.740924,-122.4126154]).addTo(map)
+    .bindPopup('Casa Banks.<br> So good.')
+    .openPopup();
+
+   
+
+  // set bounds
+  var southWest = L.latLng(37.7081596,-122.3616664),
+    northEast = L.latLng(37.7888013,-122.5185603),
+    bounds = L.latLngBounds(southWest, northEast);
+  
+
+  // load GeoJSON from an external file
+/*
+  $.getJSON("schools.geojson",function(data){
+    // add GeoJSON layer to the map once the file is loaded
+    L.geoJson(data).addTo(map);
+  });
+  */
+$.getJSON("schoolRatings.geojson",function(data){
+    var bookIcon = L.icon({
+      //iconUrl: 'http://andywoodruff.com/maptime-leaflet/rat.png',
+      iconUrl: 'book.png',
+      iconSize: [32,32]
+    });
+    L.geoJson(data,{
+      pointToLayer: function(feature,latlng){
+        var circleSize = (feature.properties.score1 + 2) *1.5;
+        var myFillOpacity = (feature.properties.score1 / 15) + 0.1;
+        var marker = L.circleMarker(latlng,{icon: bookIcon, radius: circleSize, color: 'green', opacity: 1, fillOpacity: myFillOpacity});
+        marker.bindPopup(feature.properties.school_name + '<br/> score: ' + feature.properties.score1);
+        return marker;
+      }
+    }).addTo(map).on('mouseover', onClick);
+  });
+
+function onClick(e) {
+    alert(this.getLatLng());
+}
+// add our data control
+  var info = L.control();
+
+  info.onAdd = function (map) {
+      this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+      this.update();
+      return this._div;
+  };
+
+  // method that we will use to update the control based on feature properties passed
+  info.update = function (props) {
+      this._div.innerHTML = '<h4>Elementary school</h4>' +  (props ?
+          '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+          : 'Hover over a school');
+  };
+
+info.addTo(map);
+  </script>
 </body>
+</html>
