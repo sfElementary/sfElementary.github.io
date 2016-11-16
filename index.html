@@ -64,13 +64,55 @@ L.marker([37.740924,-122.4126154]).addTo(map)
 
   // method that we will use to update the control based on feature properties passed
   info.update = function (props) {
- //     this._div.innerHTML = '<h4>Elementary schools</h4>' +  (props ?
+ // need to build a display string which uses IMMM info (if any)
+ /* json syntax will be like: 
+ "Total":187,
+    "CHN":0,
+    "FIL":0,
+    "GEN":107,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":80,
+    */
+      var immersion = '&nbsp';
+      if (props) { 
+        if (props.Total > 5) {
+          immersion = 'Total Kindergarten applicants: '+props.Total;
+        }
+        if (props.CHN > 5) {
+          immersion = immersion + '</b><br />Cantonese Biliteracy applicants: '+props.CHN; 
+        }
+        if (props.FIL > 5) {
+          immersion = immersion + '</b><br />Filipino Biliteracy applicants: '+props.FIL; 
+        }
+        if (props.JPN > 5) {
+          immersion = immersion + '</b><br />Japanese Biliteracy applicants: '+props.JPN; 
+        }
+        if (props.SPN > 5) {
+          immersion = immersion + '</b><br />Spanish Biliteracy applicants: '+props.SPN; 
+        }
+        if (props.IMMS > 5) {
+          immersion = immersion + '</b><br />Spanish Immersion applicants: '+props.IMMS; 
+        }        
+        if (props.IMMC > 5) {
+          immersion = immersion + '</b><br />Cantonese Immersion applicants: '+props.IMMC; 
+        }
+        if (props.IMMK > 5) {
+          immersion = immersion + '</b><br />Korean Immersion applicants: '+props.IMMK; 
+        }
+        if (props.IMMM > 5) {
+          immersion = immersion + '</b><br />Mandarin Immersion applicants: '+props.IMMM; 
+        }
+      }
+      else { immersion= '&nbsp';}
       this._div.innerHTML = (props ?
           '<b>' + props.school_name 
           + '</b><br />' + props.grades
           + '</b><br />' + 'Score: ' + props.score +' out of 10' 
           + '</b><br />' + '<p>' + props.math_percent + '% pass CAASPP Math ' +'&nbsp'+'&nbsp'+'&nbsp'
           + '</b><br />' + props.eng_percent + '% pass CAASPP English' + '<p>'
+          + '</b><br />' + immersion 
   
           : 'Hover over a school');
   };
@@ -89,17 +131,12 @@ function getColor(d) {
                     '#ffffe5';
 }
   // load GeoJSON from an external file
-/*
-  $.getJSON("schools.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
-  });
-  */
-$.getJSON("schools_math_english_scores.geojson",function(data){
+
+$.getJSON("school_info.geojson",function(data){
    
     L.geoJson(data,{
       pointToLayer: function(feature,latlng){
-        var circleSize = (feature.properties.score + 3) ;
+        var circleSize = (feature.properties.score + 5) ;
         var myFillOpacity = (feature.properties.score / 20) + 0.15;
         var marker = L.circleMarker(latlng,{ radius: circleSize, color: 'green', opacity: 1, fillColor: getColor(feature.properties.score), fillOpacity: 0.75});
         /*  code from when we had school urls
