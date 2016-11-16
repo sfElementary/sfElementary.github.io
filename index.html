@@ -8,7 +8,7 @@
   <script src="jquery-2.1.1.min.js"></script>
 
   <style>
-      #map { width: 1000px; height: 500px; }
+      #map { width: 90%; height: 80%; }
       .info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:150px; word-wrap:break-word;word-wrap: break-word;} 
       .info h4 { margin: 0 0 5px; color: #777; }
       .info h3 { margin: 0 0 5px; color: #777; }
@@ -112,6 +112,9 @@ $.getJSON("schools_math_english_scores.geojson",function(data){
         marker.on('mouseover', function(e){
             info.update(feature.properties);
         });
+        marker.on('click', function(e){
+            info.update(feature.properties);
+        });
 
         return marker;
       }
@@ -122,7 +125,7 @@ $.getJSON("schools_math_english_scores.geojson",function(data){
 
 </script>
 <div id="TestInfo"> 
-    <p class="mbm">
+    <p class="mbm" >
       <span class="open-sans_sb">About the test</span>     
     </p>
 
