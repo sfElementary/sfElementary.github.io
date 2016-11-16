@@ -1,21 +1,30 @@
 <html>
 <head>
-  <title>A Leaflet map!</title>
-  
+  <title>San Francisco Elementary Schools</title>
+  <meta charset="utf-8">
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
-  <link rel="stylesheet" href="MarkerCluster.css"/>
+  
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-  <script src="leaflet.markercluster.js"></script>
-
+  
   <script src="jquery-2.1.1.min.js"></script>
-  <script src="leaflet-messagebox-master/leaflet-messagebox.js"></script>
-  <style>
-    #map{ height: 100% }
-  </style>
-</head>
-<body>
 
-  <div id="map"></div>
+  <style>
+      #map { width: 1000px; height: 500px; }
+      .info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:150px; word-wrap:break-word;word-wrap: break-word;} 
+      .info h4 { margin: 0 0 5px; color: #777; }
+      .info h3 { margin: 0 0 5px; color: #777; }
+      p { font-size: 80%;}
+      .legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
+      
+  </style>
+  </head>
+  <body>
+  <div align="center">
+    <h3 id="Map Title"> San Francisco Elementary Schools 2015-2016</h3>
+  </div>
+  <div align="center">
+  <div id="map" align=""></div>
+  </div>
 
   <script>
 
@@ -27,54 +36,24 @@
     */
 
 
-var map = L.map('map').setView([37.74, -122.41], 14);
-
-
-
+var map = L.map('map').setView([37.774, -122.435], 13);
 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-
+/*
 L.marker([37.740924,-122.4126154]).addTo(map)
     .bindPopup('Casa Banks.<br> So good.')
     .openPopup();
-
+*/
    
 
-  // set bounds
+  // set bounds, not currently doing anything
   var southWest = L.latLng(37.7081596,-122.3616664),
     northEast = L.latLng(37.7888013,-122.5185603),
     bounds = L.latLngBounds(southWest, northEast);
   
 
-  // load GeoJSON from an external file
-/*
-  $.getJSON("schools.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
-  });
-  */
-$.getJSON("schoolRatings.geojson",function(data){
-    var bookIcon = L.icon({
-      //iconUrl: 'http://andywoodruff.com/maptime-leaflet/rat.png',
-      iconUrl: 'book.png',
-      iconSize: [32,32]
-    });
-    L.geoJson(data,{
-      pointToLayer: function(feature,latlng){
-        var circleSize = (feature.properties.score1 + 2) *1.5;
-        var myFillOpacity = (feature.properties.score1 / 15) + 0.1;
-        var marker = L.circleMarker(latlng,{icon: bookIcon, radius: circleSize, color: 'green', opacity: 1, fillOpacity: myFillOpacity});
-        marker.bindPopup(feature.properties.school_name + '<br/> score: ' + feature.properties.score1);
-        return marker;
-      }
-    }).addTo(map).on('mouseover', onClick);
-  });
-
-function onClick(e) {
-    alert(this.getLatLng());
-}
 // add our data control
   var info = L.control();
 
@@ -86,12 +65,75 @@ function onClick(e) {
 
   // method that we will use to update the control based on feature properties passed
   info.update = function (props) {
-      this._div.innerHTML = '<h4>Elementary school</h4>' +  (props ?
-          '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+ //     this._div.innerHTML = '<h4>Elementary schools</h4>' +  (props ?
+      this._div.innerHTML = (props ?
+          '<b>' + props.school_name 
+          + '</b><br />' + props.grades
+          + '</b><br />' + 'Score: ' + props.score +' out of 10' 
+          + '</b><br />' + '<p>' + props.math_percent + '% pass CAASPP Math ' +'&nbsp'+'&nbsp'+'&nbsp'
+          + '</b><br />' + props.eng_percent + '% pass CAASPP English' + '<p>'
+  
           : 'Hover over a school');
   };
 
 info.addTo(map);
-  </script>
+
+function getColor(d) {
+    return d > 9 ? '#004529' :
+           d > 8 ? '#006837' :
+           d > 7  ? '#238443' :
+           d > 6  ? '#41ab5d' :
+           d > 5  ? '#78c679' :
+           d > 4  ? '#addd8e' :
+           d > 3  ? '#d9f0a3' :
+           d > 2  ? '#f7fcb9' :
+                    '#ffffe5';
+}
+  // load GeoJSON from an external file
+/*
+  $.getJSON("schools.geojson",function(data){
+    // add GeoJSON layer to the map once the file is loaded
+    L.geoJson(data).addTo(map);
+  });
+  */
+$.getJSON("schools_math_english_scores.geojson",function(data){
+   
+    L.geoJson(data,{
+      pointToLayer: function(feature,latlng){
+        var circleSize = (feature.properties.score + 3) ;
+        var myFillOpacity = (feature.properties.score / 20) + 0.15;
+        var marker = L.circleMarker(latlng,{ radius: circleSize, color: 'green', opacity: 1, fillColor: getColor(feature.properties.score), fillOpacity: 0.75});
+        /*  code from when we had school urls
+        marker.bindPopup('<a href="http://www.sfusd.edu/en/' + feature.properties.school_url +'">'
+          + feature.properties.school_name
+          +'</a>'+ '<br/> score: ' + feature.properties.score1);
+          */
+        /*marker.bindPopup('Percent of student who passed <br> Math: '+feature.properties.math_percent 
+          +'% <br> English: ' +feature.properties.eng_percent+'%'); */
+        marker.on('mouseover', function(e){
+            info.update(feature.properties);
+        });
+
+        return marker;
+      }
+    }).addTo(map);
+  });
+
+
+
+</script>
+<div id="TestInfo"> 
+    <p class="mbm">
+      <span class="open-sans_sb">About the test</span>     
+    </p>
+
+  <div>
+    <p>In 2015-2016, California tested students using the California Assessment of Student Performance and Progress (CAASPP), administered through the online Smarter Balanced Summative Assessments. These are comprehensive, end-of-year assessments of grade-level learning that measure progress toward college and career readiness. Each test, English language arts/literacy (ELA) and mathematics is comprised of two parts: (1) a computer adaptive test and (2) a performance task; administered within a 12-week window beginning at 66 percent of the instructional year for grades three through eight, or within in a 7-week window beginning at 80 percent of the instructional year for grade eleven. The summative assessments are aligned with the Common Core State Standards (CCSS) for ELA and mathematics. The tests capitalize on the strengths of computer adaptive testing-efficient and precise measurement across the full range of achievement and timely turnaround of results.
+    </p>
+  </div>
+  <div class="testSource">
+          <p class="font-size-small ptm">Source: <a href="http://www.cde.ca.gov/nr/ne/yr16/yr16rel57.asp#Table1">CA Dept. of Education</a></p>
+  </div> 
+</div>
 </body>
 </html>
