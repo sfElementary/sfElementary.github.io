@@ -9,7 +9,7 @@
 
   <style>
       #map { width: 90%; height: 80%; }
-      .info { padding: 6px 8px; font: 200% Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:300px; word-wrap:break-word;word-wrap: break-word;} 
+      .info { padding: 6px 8px; font: 150% Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:250px; word-wrap:break-word;word-wrap: break-word;} 
       .info h4 { margin: 0 0 5px; color: #777; }
       .info h3 { margin: 0 0 5px; color: #777; }
       p { font-size: 80%;}
@@ -111,9 +111,13 @@ $.getJSON("schools_math_english_scores.geojson",function(data){
           +'% <br> English: ' +feature.properties.eng_percent+'%'); */
         marker.on('mouseover', function(e){
             info.update(feature.properties);
+            marker.setStyle({ color: 'black', fillOpacity: 1});
         });
         marker.on('click', function(e){
             info.update(feature.properties);
+        });
+        marker.on('mouseout', function(){
+          marker.setStyle({ color: 'green', fillOpacity: 0.75});
         });
 
         return marker;
