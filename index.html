@@ -64,17 +64,6 @@ L.marker([37.740924,-122.4126154]).addTo(map)
 
   // method that we will use to update the control based on feature properties passed
   info.update = function (props) {
- // need to build a display string which uses IMMM info (if any)
- /* json syntax will be like: 
- "Total":187,
-    "CHN":0,
-    "FIL":0,
-    "GEN":107,
-    "IMMC":0,
-    "IMMK":0,
-    "IMMM":0,
-    "IMMS":80,
-    */
       var immersion = '&nbsp';
       if (props) { 
         if (props.Total > 5) {
@@ -131,6 +120,59 @@ L.marker([37.740924,-122.4126154]).addTo(map)
           : 'Hover over a school');
   };
 
+info.shortUpdate = function (props) {
+      var immersion = '&nbsp';
+      if (props) { 
+        if (props.Total > 5) {
+          immersion = 'Total Kindergarten applicants: '+props.Total;
+        }
+        if (props.CHN > 5) {
+          immersion = immersion + '</b><br />Cantonese Biliteracy applicants: '+props.CHN; 
+        }
+        if (props.FIL > 5) {
+          immersion = immersion + '</b><br />Filipino Biliteracy applicants: '+props.FIL; 
+        }
+        if (props.JPN > 5) {
+          immersion = immersion + '</b><br />Japanese Biliteracy applicants: '+props.JPN; 
+        }
+        if (props.SPN > 5) {
+          immersion = immersion + '</b><br />Spanish Biliteracy applicants: '+props.SPN; 
+        }
+        if (props.IMMS > 5) {
+          immersion = immersion + '</b><br />Spanish Immersion applicants: '+props.IMMS; 
+        }        
+        if (props.IMMC > 5) {
+          immersion = immersion + '</b><br />Cantonese Immersion applicants: '+props.IMMC; 
+        }
+        if (props.IMMK > 5) {
+          immersion = immersion + '</b><br />Korean Immersion applicants: '+props.IMMK; 
+        }
+        if (props.IMMM > 5) {
+          immersion = immersion + '</b><br />Mandarin Immersion applicants: '+props.IMMM; 
+        }
+      }
+      else { immersion= '&nbsp';}
+      var acceptanceChance = '&nbsp';
+      if (props) {
+        if (props.KAdmitted >= props.RequestsFirst) { 
+          acceptanceChance = '</b><br />Easy to get in ' ;
+        }
+        else {
+          var chanceMath =   100 * parseInt(props.KAdmitted)/ parseInt(props.RequestsFirst) ;
+          acceptanceChance = '</b><br />Hard to get in';
+        }
+      }
+      this._div.innerHTML = (props ?
+          '<b>' + props.school_name 
+          
+          + '</b><br />' + 'Score: ' + props.score +' out of 10' 
+          + '</b><br />' + acceptanceChance
+          + '</b><br /></b><br /> click school for more info'
+         
+         
+          : 'Hover over a school');
+  };
+
 info.addTo(map);
 
 function getColor(d) {
@@ -161,7 +203,7 @@ $.getJSON("schoolsWithEnrollment.geojson",function(data){
         /*marker.bindPopup('Percent of student who passed <br> Math: '+feature.properties.math_percent 
           +'% <br> English: ' +feature.properties.eng_percent+'%'); */
         marker.on('mouseover', function(e){
-            info.update(feature.properties);
+            info.shortUpdate(feature.properties);
             marker.setStyle({ color: 'black', fillOpacity: 1});
         });
         marker.on('click', function(e){
