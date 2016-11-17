@@ -8,8 +8,8 @@
   <script src="jquery-2.1.1.min.js"></script>
 
   <style>
-      #map { width: 90%; height: 80%; }
-      .info { padding: 6px 8px; font: 150% Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:250px; word-wrap:break-word;word-wrap: break-word;} 
+      #map { width: 100%; height: 95%; }
+      .info { text-align: left; padding: 6px 8px; font: 150% Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:250px; word-wrap:break-word;word-wrap: break-word;} 
       .info h4 { margin: 0 0 5px; color: #777; }
       .info h3 { margin: 0 0 5px; color: #777; }
       p { font-size: 80%;}
@@ -103,9 +103,10 @@ L.marker([37.740924,-122.4126154]).addTo(map)
         }
         else {
           var chanceMath =   100 * parseInt(props.KAdmitted)/ parseInt(props.RequestsFirst) ;
-          acceptanceChance = '</b><br />Hard to get in (' + chanceMath.toFixed(1) + '%)'
-          + '<p>' + props.RequestsFirst + ' 1st pick applications, </b><br />'
-          + props.KAdmitted + ' Kindergarteners accepted. ';
+          acceptanceChance = '</b><br />Hard to get in '
+          + '<p>' + props.RequestsFirst + ' 1st pick applications </b><br />'
+          + props.KAdmitted + ' Kindergarteners accepted '
+          + '</b><br />' + chanceMath.toFixed(1) + '% of children who selected this as their 1st choice got in';
         }
       }
       this._div.innerHTML = (props ?
@@ -122,36 +123,7 @@ L.marker([37.740924,-122.4126154]).addTo(map)
 
 info.shortUpdate = function (props) {
       var immersion = '&nbsp';
-      if (props) { 
-        if (props.Total > 5) {
-          immersion = 'Total Kindergarten applicants: '+props.Total;
-        }
-        if (props.CHN > 5) {
-          immersion = immersion + '</b><br />Cantonese Biliteracy applicants: '+props.CHN; 
-        }
-        if (props.FIL > 5) {
-          immersion = immersion + '</b><br />Filipino Biliteracy applicants: '+props.FIL; 
-        }
-        if (props.JPN > 5) {
-          immersion = immersion + '</b><br />Japanese Biliteracy applicants: '+props.JPN; 
-        }
-        if (props.SPN > 5) {
-          immersion = immersion + '</b><br />Spanish Biliteracy applicants: '+props.SPN; 
-        }
-        if (props.IMMS > 5) {
-          immersion = immersion + '</b><br />Spanish Immersion applicants: '+props.IMMS; 
-        }        
-        if (props.IMMC > 5) {
-          immersion = immersion + '</b><br />Cantonese Immersion applicants: '+props.IMMC; 
-        }
-        if (props.IMMK > 5) {
-          immersion = immersion + '</b><br />Korean Immersion applicants: '+props.IMMK; 
-        }
-        if (props.IMMM > 5) {
-          immersion = immersion + '</b><br />Mandarin Immersion applicants: '+props.IMMM; 
-        }
-      }
-      else { immersion= '&nbsp';}
+      
       var acceptanceChance = '&nbsp';
       if (props) {
         if (props.KAdmitted >= props.RequestsFirst) { 
@@ -164,12 +136,9 @@ info.shortUpdate = function (props) {
       }
       this._div.innerHTML = (props ?
           '<b>' + props.school_name 
-          
           + '</b><br />' + 'Score: ' + props.score +' out of 10' 
           + '</b><br />' + acceptanceChance
           + '</b><br /></b><br /> click school for more info'
-         
-         
           : 'Hover over a school');
   };
 
@@ -193,7 +162,7 @@ $.getJSON("schoolsWithEnrollment.geojson",function(data){
     L.geoJson(data,{
       pointToLayer: function(feature,latlng){
         var circleSize = (feature.properties.score / 1.5) + 8 ;
-        
+        if(typeof window.orientation !== 'undefined'){ circleSize = circleSize * 3; }
         var marker = L.circleMarker(latlng,{ radius: circleSize, color: 'green', opacity: 1, fillColor: getColor(feature.properties.score), fillOpacity: 0.75});
         /*  code from when we had school urls
         marker.bindPopup('<a href="http://www.sfusd.edu/en/' + feature.properties.school_url +'">'
