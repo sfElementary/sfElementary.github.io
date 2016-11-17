@@ -108,12 +108,14 @@ L.marker([37.740924,-122.4126154]).addTo(map)
       else { immersion= '&nbsp';}
       var acceptanceChance = '&nbsp';
       if (props) {
-        if (props.KAdmitted > props.RequestsFirst) { 
+        if (props.KAdmitted >= props.RequestsFirst) { 
           acceptanceChance = '</b><br />Easy to get in ' + '</b><br />' + props.RequestsFirst + ' 1st pick applications, </b><br />'
           + props.KAdmitted + ' Kindergarteners accepted. ';
         }
         else {
-          acceptanceChance = '</b><br />Hard to get in ' + '</b><br />' + props.RequestsFirst + ' 1st pick applications, </b><br />'
+          var chanceMath =   100 * parseInt(props.KAdmitted)/ parseInt(props.RequestsFirst) ;
+          acceptanceChance = '</b><br />Hard to get in (' + chanceMath.toFixed(1) + '%)'
+          + '</b><br />' + props.RequestsFirst + ' 1st pick applications, </b><br />'
           + props.KAdmitted + ' Kindergarteners accepted. ';
         }
       }
