@@ -106,6 +106,17 @@ L.marker([37.740924,-122.4126154]).addTo(map)
         }
       }
       else { immersion= '&nbsp';}
+      var acceptanceChance = '&nbsp';
+      if (props) {
+        if (props.KAdmitted > props.RequestsFirst) { 
+          acceptanceChance = '</b><br />Easy to get in ' + '</b><br />' + props.RequestsFirst + ' 1st pick applications, </b><br />'
+          + props.KAdmitted + ' Kindergarteners accepted. ';
+        }
+        else {
+          acceptanceChance = '</b><br />Hard to get in ' + '</b><br />' + props.RequestsFirst + ' 1st pick applications, </b><br />'
+          + props.KAdmitted + ' Kindergarteners accepted. ';
+        }
+      }
       this._div.innerHTML = (props ?
           '<b>' + props.school_name 
           + '</b><br />' + props.grades
@@ -113,7 +124,7 @@ L.marker([37.740924,-122.4126154]).addTo(map)
           + '</b><br />' + '<p>' + props.math_percent + '% pass CAASPP Math ' +'&nbsp'+'&nbsp'+'&nbsp'
           + '</b><br />' + props.eng_percent + '% pass CAASPP English' + '<p>'
           + '</b><br />' + immersion 
-  
+          + '</b><br />' + acceptanceChance 
           : 'Hover over a school');
   };
 
@@ -132,12 +143,13 @@ function getColor(d) {
 }
   // load GeoJSON from an external file
 
-$.getJSON("school_info.geojson",function(data){
+$.getJSON("schoolsWithEnrollment.geojson",function(data){
    
     L.geoJson(data,{
       pointToLayer: function(feature,latlng){
         var circleSize = (feature.properties.score + 5) ;
-        var myFillOpacity = (feature.properties.score / 20) + 0.15;
+        circleSize = 12;
+        
         var marker = L.circleMarker(latlng,{ radius: circleSize, color: 'green', opacity: 1, fillColor: getColor(feature.properties.score), fillOpacity: 0.75});
         /*  code from when we had school urls
         marker.bindPopup('<a href="http://www.sfusd.edu/en/' + feature.properties.school_url +'">'
