@@ -164,7 +164,7 @@ $.getJSON("schoolsWithEnrollment.geojson",function(data){
     L.geoJson(data,{
       pointToLayer: function(feature,latlng){
         var circleSize = (feature.properties.score / 1.5) + 8 ;
-        if(typeof window.orientation !== 'undefined'){ circleSize = circleSize * 2.5; }
+        if(typeof window.orientation !== 'undefined'){ circleSize = circleSize +20; }
         var marker = L.circleMarker(latlng,{ radius: circleSize, color: 'green', opacity: 1, fillColor: getColor(feature.properties.score), fillOpacity: 0.75});
         /*  code from when we had school urls
         marker.bindPopup('<a href="http://www.sfusd.edu/en/' + feature.properties.school_url +'">'
