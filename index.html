@@ -69,53 +69,49 @@ L.marker([37.740924,-122.4126154]).addTo(map)
       var immersion = '&nbsp';
       if (props) { 
         if (props.Total > 5) {
-          immersion = 'Total Kindergarten applicants: '+props.Total;
+          immersion = props.Total +' Kindergarten applicants (total)';
         }
         if (props.CHN > 5) {
-          immersion = immersion + '</b><br />Cantonese Biliteracy applicants: '+props.CHN; 
+          immersion = immersion + '</b><br />' +props.CHN + ' Cantonese Biliteracy applicants '; 
         }
         if (props.FIL > 5) {
-          immersion = immersion + '</b><br />Filipino Biliteracy applicants: '+props.FIL; 
+          immersion = immersion + '</b><br />' +props.FIL + ' Filipino Biliteracy applicants '; 
         }
         if (props.JPN > 5) {
-          immersion = immersion + '</b><br />Japanese Biliteracy applicants: '+props.JPN; 
+            immersion = immersion + '</b><br />' +props.JPN + ' Japanese Biliteracy applicants '; 
         }
         if (props.SPN > 5) {
-          immersion = immersion + '</b><br />Spanish Biliteracy applicants: '+props.SPN; 
+            immersion = immersion + '</b><br />' +props.SPN + ' Spanish Biliteracy applicants '; 
         }
         if (props.IMMS > 5) {
-          immersion = immersion + '</b><br />Spanish Immersion applicants: '+props.IMMS; 
+          immersion = immersion + '</b><br />' +props.IMMS + ' Spanish Immersion applicants '; 
         }        
         if (props.IMMC > 5) {
-          immersion = immersion + '</b><br />Cantonese Immersion applicants: '+props.IMMC; 
+          immersion = immersion + '</b><br />' + props.IMMC + ' Cantonese Immersion applicants '; 
         }
         if (props.IMMK > 5) {
-          immersion = immersion + '</b><br />Korean Immersion applicants: '+props.IMMK; 
+          immersion = immersion + '</b><br />' + props.IMMK + ' Korean Immersion applicants '; 
         }
         if (props.IMMM > 5) {
-          immersion = immersion + '</b><br />Mandarin Immersion applicants: '+props.IMMM; 
+          immersion = immersion + '</b><br />' + props.IMMM + ' Mandarin Immersion applicants '; 
         }
       }
       else { immersion= '&nbsp';}
       var acceptanceChance = '&nbsp';
       if (props) {
-        if (props.KAdmitted >= props.RequestsFirst) { 
-          acceptanceChance = '</b><br />Easy to get in ' + '<p>' + props.RequestsFirst + ' 1st pick applications, </b><br />'
-          + props.KAdmitted + ' Kindergarteners accepted. ';
-        }
-        else {
-          var chanceMath =   100 * parseInt(props.KAdmitted)/ parseInt(props.RequestsFirst) ;
-          acceptanceChance = '</b><br />Hard to get in '
-          + '<p>' + props.RequestsFirst + ' 1st pick applications </b><br />'
-          + props.KAdmitted + ' Kindergarteners accepted '
-          + '</b><br />' + chanceMath.toFixed(1) + '% of children who selected this as their 1st choice got in';
-        }
+          if (parseInt(props.Total) <= 0) {props.Total = props.KAdmitted; }  // catch garbage data for Mission Edu Ctr
+
+          var chanceMath =   100 * parseInt(props.KAdmitted)/ parseInt(props.Total) ;
+          acceptanceChance = chanceMath.toFixed(1) + '% of applicants accepted'
+         // + '<p>' + props.Total + ' children applied </b><br />'
+          + '<p>' + props.KAdmitted + ' Kindergarteners accepted ';
+        
       }
       this._div.innerHTML = (props ?
           '<b>' + props.school_name 
           + '</b><br />' + props.grades
           + '</b><br />' + 'Score: ' + props.score +' out of 10' 
-          + acceptanceChance 
+          + '</b><br />' + acceptanceChance 
           + '<p>' + immersion 
           + '</b><br />' + '<p>' + props.math_percent + '% pass CAASPP Math ' +'&nbsp'+'&nbsp'+'&nbsp'
           + '</b><br />' + props.eng_percent + '% pass CAASPP English' + '<p>'
@@ -128,17 +124,14 @@ info.shortUpdate = function (props) {
       
       var acceptanceChance = '&nbsp';
       if (props) {
-        if (props.KAdmitted >= props.RequestsFirst) { 
-          acceptanceChance = '</b><br />Easy to get in ' ;
-        }
-        else {
-          var chanceMath =   100 * parseInt(props.KAdmitted)/ parseInt(props.RequestsFirst) ;
-          acceptanceChance = '</b><br />Hard to get in';
-        }
+        if (parseInt(props.Total) <= 0) {props.Total = props.KAdmitted; }  // catch garbage data for Mission Edu Ctr
+
+        var chanceMath = 100 * (parseInt(props.KAdmitted)/ parseInt(props.Total));
+        acceptanceChance = chanceMath.toFixed(1) + '% of applicants accepted';
       }
       this._div.innerHTML = (props ?
           '<b>' + props.school_name 
-          + '</b><br />' + 'Score: ' + props.score +' out of 10' 
+          + '</b><br />' +'</b><br />' + 'Score: ' + props.score +' out of 10' 
           + '</b><br />' + acceptanceChance
           + '</b><br /></b><br /> click school for more info'
           : 'Hover over a school');
