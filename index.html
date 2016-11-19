@@ -76,7 +76,15 @@
 
   <script>
 
-  if(typeof window.orientation !== 'undefined'){ var map = L.map('map').setView([37.774, -122.435], 14); } 
+  if(typeof window.orientation !== 'undefined') {  // checking for mobile
+    var map = L.map('map').setView([37.774, -122.435], 14); 
+    map.touchZoom.disable();
+    map.doubleClickZoom.disable();
+    map.scrollWheelZoom.disable();
+    map.boxZoom.disable();
+    map.keyboard.disable();
+    $(".leaflet-control-zoom").css("visibility", "hidden");
+    } 
     else{
       var map = L.map('map').setView([37.774, -122.435], 13);
     }
@@ -253,7 +261,10 @@ function openBottomTab(evt, cityName) {
 </div>
 
 <div id="About" class="tabcontent"> <forceFont>
-  <p>Here we say things about our goals, etc</p> </forceFont>
+  <p>This project shows San Francisco Elementary school data on a map. The color of the circle indicates the test scores of the school (darker is better).</p> 
+  <p> San Francisco's school lottery system is tough to explain. Here are some attempts: <a href="http://www.sfkfiles.com/2013/04/how-to-play-san-francisco-school.html" class="one"> a blog post </a>, <a class="one" href="http://blog.pacificunion.com/san-francisco-public-school-lottery/"> another blog post </a>, <a class="one" href="http://www.sfusd.edu/en/assets/sfusd-staff/enroll/files/2012-13/Assignment-Transfer%20process%20explained.pdf"> official ambiguous PDF </a>
+  </p>
+  </forceFont>
 </div>
 
 </body>
