@@ -11,7 +11,7 @@
 
       #map { width: 100%; height: 75%; }
       .info { text-align: left; padding: 6px 8px; font: 140% Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:300px; word-wrap:break-word;word-wrap: break-word;} 
-      .infoMobile { text-align: left; padding: 6px 8px; font: 200% Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:600px; word-wrap:break-word;word-wrap: break-word;} 
+      .infoMobile { text-align: left; padding: 6px 8px; font: 250% Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:600px; word-wrap:break-word;word-wrap: break-word;} 
       .info h4 { margin: 0 0 5px; color: #777; }
       .info h3 { margin: 0 0 5px; color: #777; }
 
@@ -22,9 +22,11 @@
       forceFont {
         font: 100% Arial, Helvetica, sans-serif; 
       }
-      a.one:link {color:#46673b;}
+      a.one:link {color:#46673b;} /* for re-coloring link text to pleasant green */
 
-      .legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
+      .legend { text-align: left; line-height: 18px; color: #555; } 
+      .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
+      
       .tabIndent { margin-left: 40px; }
 
       /* stuff for bottom tabs */
@@ -250,8 +252,8 @@ function openBottomTab(evt, cityName) {
 </ul>
 
 <div id="Authors" class="tabcontent"> <forceFont>
-  <a class="one" href="https://www.linkedin.com/in/morgan-whitmont-19547a66">Morgan Whitmont</a> wrote code and designed the site. </b><br /></b><br />
-  <a class="one" href= "https://www.usfca.edu/faculty/yannet-interian">Yannet Interian</a> envisioned this project and gathered data. She is an Assistant Professor at University of San Francisco and is currently teaching full time for USF's Masters Program in Analytics.
+  <a class="one" href="https://www.linkedin.com/in/morgan-whitmont-19547a66" target="_newtab">Morgan Whitmont</a> wrote code and designed the site. </b><br /></b><br />
+  <a class="one" href= "https://www.usfca.edu/faculty/yannet-interian" target="_newtab">Yannet Interian</a> envisioned this project and gathered data. She is an Assistant Professor at University of San Francisco and is currently teaching full time for USF's Masters Program in Analytics.
 </div>
 
 <div id="Data" class="tabcontent"> <forceFont>
@@ -263,13 +265,13 @@ function openBottomTab(evt, cityName) {
   <forceFont>
   <p> In 2015-2016, California tested students using the California Assessment of Student Performance and Progress (CAASPP), administered through the online Smarter Balanced Summative Assessments. These are comprehensive, end-of-year assessments of grade-level learning that measure progress toward college and career readiness. Each test, English language arts/literacy (ELA) and mathematics is comprised of two parts: (1) a computer adaptive test and (2) a performance task; administered within a 12-week window beginning at 66 percent of the instructional year for grades three through eight, or within in a 7-week window beginning at 80 percent of the instructional year for grade eleven. The summative assessments are aligned with the Common Core State Standards (CCSS) for ELA and mathematics. The tests capitalize on the strengths of computer adaptive testing-efficient and precise measurement across the full range of achievement and timely turnaround of results.
   </p>
-  <p class="font-size-small ptm">Source: <a class="one" href="http://www.cde.ca.gov/nr/ne/yr16/yr16rel57.asp#Table1">CA Dept. of Education</a></p> 
+  <p class="font-size-small ptm">Source: <a class="one" href="http://www.cde.ca.gov/nr/ne/yr16/yr16rel57.asp#Table1" target="_newtab">CA Dept. of Education</a></p> 
   </forceFont>
 </div>
 
 <div id="About" class="tabcontent"> <forceFont>
   <p>This project shows San Francisco Elementary school data on a map. The color of the circle indicates the test scores of the school (darker is better).</p> 
-  <p> San Francisco's school lottery system is tough to explain. Here are some attempts: <a href="http://www.sfkfiles.com/2013/04/how-to-play-san-francisco-school.html" class="one"> a blog post </a>, <a class="one" href="http://blog.pacificunion.com/san-francisco-public-school-lottery/"> another blog post </a>, <a class="one" href="http://www.sfusd.edu/en/assets/sfusd-staff/enroll/files/2012-13/Assignment-Transfer%20process%20explained.pdf"> official ambiguous PDF </a>
+  <p> San Francisco's school lottery system is tough to explain. Here are some attempts: <a href="http://www.sfkfiles.com/2013/04/how-to-play-san-francisco-school.html" class="one" target="_newtab"> a blog post </a>, <a class="one" href="http://blog.pacificunion.com/san-francisco-public-school-lottery/" target="_newtab"> another blog post </a>, <a class="one" href="http://www.sfusd.edu/en/assets/sfusd-staff/enroll/files/2012-13/Assignment-Transfer%20process%20explained.pdf" target="_newtab"> official ambiguous PDF </a>
   </p>
   </forceFont>
 </div>
