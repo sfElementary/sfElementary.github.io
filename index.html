@@ -8,6 +8,7 @@
   <script src="jquery-2.1.1.min.js"></script>
 
   <style>
+
       #map { width: 100%; height: 75%; }
       .info { text-align: left; padding: 6px 8px; font: 140% Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:300px; word-wrap:break-word;word-wrap: break-word;} 
       .info h4 { margin: 0 0 5px; color: #777; }
@@ -68,7 +69,7 @@
   </style>
   </head>
 
-  <body>
+  <body style="background-color:#eee5dc"> 
   <div align="center">
   <div id="map" align=""></div>
   </div>
@@ -225,10 +226,12 @@ function openBottomTab(evt, cityName) {
 }
 </script>
 
-<ul class="tab">  
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openBottomTab(event, 'CAASPP')">What is CAASPP?</a></li>
+<ul class="tab">
+   <li><a href="javascript:void(0)" class="tablinks" onclick="openBottomTab(event, 'About')">About</a></li>  
   <li><a href="javascript:void(0)" class="tablinks" onclick="openBottomTab(event, 'Data')">Data</a></li>
   <li><a href="javascript:void(0)" class="tablinks" onclick="openBottomTab(event, 'Authors')">Authors</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openBottomTab(event, 'CAASPP')">What is CAASPP?</a></li>
+  
 </ul>
 
 <div id="Authors" class="tabcontent"> <forceFont>
@@ -247,6 +250,10 @@ function openBottomTab(evt, cityName) {
   </p>
   <p class="font-size-small ptm">Source: <a class="one" href="http://www.cde.ca.gov/nr/ne/yr16/yr16rel57.asp#Table1">CA Dept. of Education</a></p> 
   </forceFont>
+</div>
+
+<div id="About" class="tabcontent"> <forceFont>
+  <p>Here we say things about our goals, etc</p> </forceFont>
 </div>
 
 </body>
