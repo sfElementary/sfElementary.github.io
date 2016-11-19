@@ -9,23 +9,23 @@
 
   <style>
       #map { width: 100%; height: 75%; }
-      .info { text-align: left; padding: 6px 8px; font: 130% Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:300px; word-wrap:break-word;word-wrap: break-word;} 
+      .info { text-align: left; padding: 6px 8px; font: 140% Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:300px; word-wrap:break-word;word-wrap: break-word;} 
       .info h4 { margin: 0 0 5px; color: #777; }
       .info h3 { margin: 0 0 5px; color: #777; }
 
-      shrinker {  /* or .call em, but you should aim for consistency in your styling */
+      shrinker {  /* used for smaller text */
         font-style: normal;
         font-size: 80%;
         }
       forceFont {
-        font: 100% Arial, Helvetica, sans-serif; /* #46673b */
+        font: 100% Arial, Helvetica, sans-serif; 
       }
       a.one:link {color:#46673b;}
 
       .legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
       .tabIndent { margin-left: 40px; }
-      /*  adding some stuff for author credit */
-      /* Style the list */
+
+      /* stuff for bottom tabs */
       ul.tab {
           font: 150% Arial, Helvetica, sans-serif;
           list-style-type: none;
@@ -33,14 +33,12 @@
           padding: 0;
           overflow: hidden;
           border: 0px solid #ccc;
-         /* background-color: #e0dfdf; */
-          background-color: #cdebb0;
+          background-color: #eee5dc; 
       }
 
       /* Float the list items side by side */
       ul.tab li {float: left;}
 
-      /* Style the links inside the list items */
       ul.tab li a {
           font: Arial, Helvetica, sans-serif; 
           display: inline-block;
@@ -53,43 +51,39 @@
       }
 
       /* Change background color of links on hover */
-      ul.tab li a:hover {background-color: #b5e3b5;}
+      ul.tab li a:hover {background-color: #cdebb0;} 
 
       /* Create an active/current tablink class */
-      ul.tab li a:focus, .active {background-color: #add19e;}
+      ul.tab li a:focus, .active {background-color: #b5e3b5;} 
 
-      /* Style the tab content */
       .tabcontent {
           display: none;
           padding: 6px 12px;
           border: 1px solid #ccc;
           border-top: none;
           font: Arial, Helvetica, sans-serif;  
-          background-color: #add19e;
-
+          background-color: #b5e3b5; 
       }
 
   </style>
   </head>
+
   <body>
-  <!-- <div align="center">
-    <h3 id="Map Title"> San Francisco Elementary Schools 2015-2016</h3>
-  </div> -->
   <div align="center">
-  <div id="map" align="">test bs here</div>
+  <div id="map" align=""></div>
   </div>
 
   <script>
 
-if(typeof window.orientation !== 'undefined'){ var map = L.map('map').setView([37.774, -122.435], 14); } 
-  else{
-    var map = L.map('map').setView([37.774, -122.435], 13);
-  }
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+  if(typeof window.orientation !== 'undefined'){ var map = L.map('map').setView([37.774, -122.435], 14); } 
+    else{
+      var map = L.map('map').setView([37.774, -122.435], 13);
+    }
+  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
 
-// add our data control
+ // add our data control panel
   var info = L.control();
 
   info.onAdd = function (map) {
@@ -98,7 +92,7 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       return this._div;
   };
 
-  // method that we will use to update the control based on feature properties passed
+  // method to update the control, based on feature properties passed
   info.update = function (props) {
       var immersion = '&nbsp';
       if (props) { 
@@ -172,7 +166,7 @@ info.shortUpdate = function (props) {
 
 info.addTo(map);
 
-function getColor(d) {
+function getColor(d) { // from colorbrewer2.org
     return d > 9 ? '#004529' :
            d > 8 ? '#006837' :
            d > 7  ? '#238443' :
@@ -183,8 +177,8 @@ function getColor(d) {
            d > 2  ? '#f7fcb9' :
                     '#ffffe5';
 }
-  // load GeoJSON from an external file
 
+// load GeoJSON from an external file
 $.getJSON("schoolsWithEnrollment.geojson",function(data){
    
     L.geoJson(data,{
@@ -192,13 +186,7 @@ $.getJSON("schoolsWithEnrollment.geojson",function(data){
         var circleSize = (feature.properties.score / 1.5) + 8 ;
         if(typeof window.orientation !== 'undefined'){ circleSize = circleSize +20; }
         var marker = L.circleMarker(latlng,{ radius: circleSize, color: 'green', opacity: 1, fillColor: getColor(feature.properties.score), fillOpacity: 0.75});
-        /*  code from when we had school urls
-        marker.bindPopup('<a href="http://www.sfusd.edu/en/' + feature.properties.school_url +'">'
-          + feature.properties.school_name
-          +'</a>'+ '<br/> score: ' + feature.properties.score1);
-          */
-        /*marker.bindPopup('Percent of student who passed <br> Math: '+feature.properties.math_percent 
-          +'% <br> English: ' +feature.properties.eng_percent+'%'); */
+
         marker.on('mouseover', function(e){
             info.shortUpdate(feature.properties);
             marker.setStyle({ color: 'black', fillOpacity: 1});
@@ -217,7 +205,6 @@ $.getJSON("schoolsWithEnrollment.geojson",function(data){
 
 
 function openBottomTab(evt, cityName) {
-    // Declare all variables
     var i, tabcontent, tablinks;
 
     // Get all elements with class="tabcontent" and hide them
@@ -249,9 +236,9 @@ function openBottomTab(evt, cityName) {
   <a class="one" href= "https://www.usfca.edu/faculty/yannet-interian">Yannet Interian</a> envisioned this project and gathered data. She is an Assistant Professor at University of San Francisco and is currently teaching full time for USF's Masters Program in Analytics.
 </div>
 
-<div id="Data" class="tabcontent">
+<div id="Data" class="tabcontent"> <forceFont>
   <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> </forceFont>
 </div>
 
 <div id="CAASPP" class="tabcontent"> 
