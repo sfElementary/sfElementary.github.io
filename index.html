@@ -8,32 +8,78 @@
   <script src="jquery-2.1.1.min.js"></script>
 
   <style>
-      #map { width: 100%; height: 95%; }
-      .info { text-align: left; padding: 6px 8px; font: 150% Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:250px; word-wrap:break-word;word-wrap: break-word;} 
+      #map { width: 100%; height: 75%; }
+      .info { text-align: left; padding: 6px 8px; font: 130% Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:300px; word-wrap:break-word;word-wrap: break-word;} 
       .info h4 { margin: 0 0 5px; color: #777; }
       .info h3 { margin: 0 0 5px; color: #777; }
-      p { font-size: 80%;}
+
+      shrinker {  /* or .call em, but you should aim for consistency in your styling */
+        font-style: normal;
+        font-size: 80%;
+        }
+      forceFont {
+        font: 100% Arial, Helvetica, sans-serif; /* #46673b */
+      }
+      a.one:link {color:#46673b;}
+
       .legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
-      
+      .tabIndent { margin-left: 40px; }
+      /*  adding some stuff for author credit */
+      /* Style the list */
+      ul.tab {
+          font: 150% Arial, Helvetica, sans-serif;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          border: 0px solid #ccc;
+         /* background-color: #e0dfdf; */
+          background-color: #cdebb0;
+      }
+
+      /* Float the list items side by side */
+      ul.tab li {float: left;}
+
+      /* Style the links inside the list items */
+      ul.tab li a {
+          font: Arial, Helvetica, sans-serif; 
+          display: inline-block;
+          color: black;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          transition: 0.3s;
+          font-size: 17px;
+      }
+
+      /* Change background color of links on hover */
+      ul.tab li a:hover {background-color: #b5e3b5;}
+
+      /* Create an active/current tablink class */
+      ul.tab li a:focus, .active {background-color: #add19e;}
+
+      /* Style the tab content */
+      .tabcontent {
+          display: none;
+          padding: 6px 12px;
+          border: 1px solid #ccc;
+          border-top: none;
+          font: Arial, Helvetica, sans-serif;  
+          background-color: #add19e;
+
+      }
+
   </style>
   </head>
   <body>
-  <div align="center">
+  <!-- <div align="center">
     <h3 id="Map Title"> San Francisco Elementary Schools 2015-2016</h3>
-  </div>
+  </div> -->
   <div align="center">
-  <div id="map" align=""></div>
+  <div id="map" align="">test bs here</div>
   </div>
 
   <script>
-
-  // initialize the map
-  //var map = L.map('map').setView([42.35, -71.08], 13); //Boston
-/* var southWest = L.latLng(37.6982268,-122.5239693,
-    northEast = L.latLng(37.8203137,-122.3841439),
-    bounds = L.latLngBounds(southWest, northEast);
-    */
-
 
 if(typeof window.orientation !== 'undefined'){ var map = L.map('map').setView([37.774, -122.435], 14); } 
   else{
@@ -42,18 +88,6 @@ if(typeof window.orientation !== 'undefined'){ var map = L.map('map').setView([3
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-/*
-L.marker([37.740924,-122.4126154]).addTo(map)
-    .bindPopup('Casa Banks.<br> So good.')
-    .openPopup();
-*/
-   
-
-  // set bounds, not currently doing anything
-  var southWest = L.latLng(37.7081596,-122.3616664),
-    northEast = L.latLng(37.7888013,-122.5185603),
-    bounds = L.latLngBounds(southWest, northEast);
-  
 
 // add our data control
   var info = L.control();
@@ -69,7 +103,7 @@ L.marker([37.740924,-122.4126154]).addTo(map)
       var immersion = '&nbsp';
       if (props) { 
         if (props.Total > 5) {
-          immersion = props.Total +' Kindergarten applicants (total)';
+          immersion = '</b><br /> <shrinker class="tabIndent">' + props.Total +' total applicants' +'</shrinker>' ;
         }
         if (props.CHN > 5) {
           immersion = immersion + '</b><br />' +props.CHN + ' Cantonese Biliteracy applicants '; 
@@ -103,18 +137,17 @@ L.marker([37.740924,-122.4126154]).addTo(map)
 
           var chanceMath =   100 * parseInt(props.KAdmitted)/ parseInt(props.Total) ;
           acceptanceChance = chanceMath.toFixed(1) + '% of applicants accepted'
-         // + '<p>' + props.Total + ' children applied </b><br />'
-          + '<p>' + props.KAdmitted + ' Kindergarteners accepted ';
+          + '</b><br /> <shrinker class="tabIndent">' + props.KAdmitted + ' Kindergarteners accepted </shrinker>';
         
       }
       this._div.innerHTML = (props ?
           '<b>' + props.school_name 
-          + '</b><br />' + props.grades
+          + '</b><br />' + props.grades 
           + '</b><br />' + 'Score: ' + props.score +' out of 10' 
+          + '</b><br />' + '<shrinker class= "tabIndent">' + props.math_percent + '% pass CAASPP Math ' +'</shrinker> &nbsp'+'&nbsp'+'&nbsp'
+          + '</b><br />' + '<shrinker class= "tabIndent">' + props.eng_percent + '% pass CAASPP English' + '</shrinker>'
           + '</b><br />' + acceptanceChance 
-          + '<p>' + immersion 
-          + '</b><br />' + '<p>' + props.math_percent + '% pass CAASPP Math ' +'&nbsp'+'&nbsp'+'&nbsp'
-          + '</b><br />' + props.eng_percent + '% pass CAASPP English' + '<p>'
+          +  immersion 
          
           : 'Hover over a school');
   };
@@ -132,7 +165,7 @@ info.shortUpdate = function (props) {
       this._div.innerHTML = (props ?
           '<b>' + props.school_name 
           + '</b><br />' +'</b><br />' + 'Score: ' + props.score +' out of 10' 
-          + '</b><br />' + acceptanceChance
+          + '</b><br />' +'</b><br />' + acceptanceChance
           + '</b><br /></b><br /> click school for more info'
           : 'Hover over a school');
   };
@@ -183,20 +216,51 @@ $.getJSON("schoolsWithEnrollment.geojson",function(data){
   });
 
 
+function openBottomTab(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
 
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
 </script>
-<div id="TestInfo"> 
-    <p class="mbm" >
-      <span class="open-sans_sb">About the test</span>     
-    </p>
 
-  <div>
-    <p>In 2015-2016, California tested students using the California Assessment of Student Performance and Progress (CAASPP), administered through the online Smarter Balanced Summative Assessments. These are comprehensive, end-of-year assessments of grade-level learning that measure progress toward college and career readiness. Each test, English language arts/literacy (ELA) and mathematics is comprised of two parts: (1) a computer adaptive test and (2) a performance task; administered within a 12-week window beginning at 66 percent of the instructional year for grades three through eight, or within in a 7-week window beginning at 80 percent of the instructional year for grade eleven. The summative assessments are aligned with the Common Core State Standards (CCSS) for ELA and mathematics. The tests capitalize on the strengths of computer adaptive testing-efficient and precise measurement across the full range of achievement and timely turnaround of results.
-    </p>
-  </div>
-  <div class="testSource">
-          <p class="font-size-small ptm">Source: <a href="http://www.cde.ca.gov/nr/ne/yr16/yr16rel57.asp#Table1">CA Dept. of Education</a></p>
-  </div> 
+<ul class="tab">  
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openBottomTab(event, 'CAASPP')">What is CAASPP?</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openBottomTab(event, 'Data')">Data</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openBottomTab(event, 'Authors')">Authors</a></li>
+</ul>
+
+<div id="Authors" class="tabcontent"> <forceFont>
+  <a class="one" href="https://www.linkedin.com/in/morgan-whitmont-19547a66">Morgan Whitmont</a> wrote code and designed the site. </b><br /></b><br />
+  <a class="one" href= "https://www.usfca.edu/faculty/yannet-interian">Yannet Interian</a> envisioned this project and gathered data. She is an Assistant Professor at University of San Francisco and is currently teaching full time for USF's Masters Program in Analytics.
 </div>
+
+<div id="Data" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="CAASPP" class="tabcontent"> 
+  <forceFont>
+  <p> In 2015-2016, California tested students using the California Assessment of Student Performance and Progress (CAASPP), administered through the online Smarter Balanced Summative Assessments. These are comprehensive, end-of-year assessments of grade-level learning that measure progress toward college and career readiness. Each test, English language arts/literacy (ELA) and mathematics is comprised of two parts: (1) a computer adaptive test and (2) a performance task; administered within a 12-week window beginning at 66 percent of the instructional year for grades three through eight, or within in a 7-week window beginning at 80 percent of the instructional year for grade eleven. The summative assessments are aligned with the Common Core State Standards (CCSS) for ELA and mathematics. The tests capitalize on the strengths of computer adaptive testing-efficient and precise measurement across the full range of achievement and timely turnaround of results.
+  </p>
+  <p class="font-size-small ptm">Source: <a class="one" href="http://www.cde.ca.gov/nr/ne/yr16/yr16rel57.asp#Table1">CA Dept. of Education</a></p> 
+  </forceFont>
+</div>
+
 </body>
 </html>
