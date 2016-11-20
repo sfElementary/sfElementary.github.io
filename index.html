@@ -291,7 +291,7 @@ var legend = L.control({position: 'bottomright'});
 // 
 
 // load GeoJSON from an external file
-$.getJSON("schoolsWithEnrollment.geojson",function(data){
+$.getJSON("schools_with_enrollment.geojson",function(data){
    
     L.geoJson(data,{
       pointToLayer: function(feature,latlng){

@@ -1,0 +1,2225 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4821905,37.7831238 ]
+    },
+    "properties": {
+    "school_name":"Alamo Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Outer Richmond",
+    "address":"250 23rd Avenue",
+    "eng_percent":69,
+    "math_percent":75,
+    "score":9,
+    "Total":1060,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1060,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":90,
+    "RequestsTotal":1060,
+    "RequestsFirst":92
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4696914,37.7591991 ]
+    },
+    "properties": {
+    "school_name":"Alice Fong Yu Alternative School (K8)",
+    "grades":"Grades K-8",
+    "neighb":"Inner Sunset",
+    "address":"1541 12th Avenue",
+    "eng_percent":78,
+    "math_percent":78,
+    "score":10,
+    "Total":1013,
+    "CHN":0,
+    "FIL":0,
+    "GEN":0,
+    "IMMC":1013,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":67,
+    "RequestsTotal":1013,
+    "RequestsFirst":210
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4384207,37.753751 ]
+    },
+    "properties": {
+    "school_name":"Alvarado Elementary School",
+    "grades":"TK-5",
+    "neighb":"Noe Valley",
+    "address":"625 Douglass Street",
+    "eng_percent":60,
+    "math_percent":59,
+    "score":7,
+    "Total":1658,
+    "CHN":0,
+    "FIL":0,
+    "GEN":944,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":714,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":89,
+    "RequestsTotal":1658,
+    "RequestsFirst":178
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.476425,37.7753554 ]
+    },
+    "properties": {
+    "school_name":"Argonne Elementary School - Extended Year",
+    "grades":"Grades K-5",
+    "neighb":"Inner Richmond",
+    "address":"680 18th Avenue",
+    "eng_percent":64,
+    "math_percent":64,
+    "score":8,
+    "Total":1080,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1080,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":66,
+    "RequestsTotal":1080,
+    "RequestsFirst":84
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.3890251,37.7183753 ]
+    },
+    "properties": {
+    "school_name":"Bret Harte Elementary School",
+    "grades":"PreK/TK-5",
+    "neighb":"Bayview",
+    "address":"1035 Gilman Avenue",
+    "eng_percent":9,
+    "math_percent":5,
+    "score":1,
+    "Total":187,
+    "CHN":0,
+    "FIL":0,
+    "GEN":107,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":80,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":37,
+    "RequestsTotal":187,
+    "RequestsFirst":13
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.404906,37.7516281 ]
+    },
+    "properties": {
+    "school_name":"Bryant Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Mission",
+    "address":"2641 25th Street",
+    "eng_percent":39,
+    "math_percent":34,
+    "score":4,
+    "Total":228,
+    "CHN":0,
+    "FIL":0,
+    "GEN":149,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":79,
+    "KAdmitted":39,
+    "RequestsTotal":228,
+    "RequestsFirst":35
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4199993,37.7535332 ]
+    },
+    "properties": {
+    "school_name":"Buena Vista Horace Mann K-8 Community School",
+    "grades":"Grades K-8",
+    "neighb":"Mission",
+    "address":"3351 23rd Street",
+    "eng_percent":31,
+    "math_percent":27,
+    "score":3,
+    "Total":601,
+    "CHN":0,
+    "FIL":0,
+    "GEN":0,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":601,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":64,
+    "RequestsTotal":601,
+    "RequestsFirst":117
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4065093,37.7762168 ]
+    },
+    "properties": {
+    "school_name":"Carmichael Bessie School (PreK-5 Campus)",
+    "grades":"PreK-8",
+    "neighb":"South of Market",
+    "address":"375 7th Street",
+    "eng_percent":39,
+    "math_percent":36,
+    "score":4,
+    "Total":217,
+    "CHN":0,
+    "FIL":34,
+    "GEN":183,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":85,
+    "RequestsTotal":217,
+    "RequestsFirst":35
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.3861159,37.7321987 ]
+    },
+    "properties": {
+    "school_name":"Carver Dr. George Washington Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Bayview",
+    "address":"1360 Oakdale Avenue",
+    "eng_percent":12,
+    "math_percent":11,
+    "score":1,
+    "Total":114,
+    "CHN":0,
+    "FIL":0,
+    "GEN":114,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":31,
+    "RequestsTotal":114,
+    "RequestsFirst":8
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4151875,37.7549534 ]
+    },
+    "properties": {
+    "school_name":"Cesar Chavez Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Mission",
+    "address":"825 Shotwell Street",
+    "eng_percent":21,
+    "math_percent":13,
+    "score":1,
+    "Total":263,
+    "CHN":0,
+    "FIL":0,
+    "GEN":161,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":102,
+    "KAdmitted":72,
+    "RequestsTotal":263,
+    "RequestsFirst":35
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4040517,37.7948242 ]
+    },
+    "properties": {
+    "school_name":"Chinese Education Center Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Financial District",
+    "address":"657 Merchant Street",
+    "eng_percent":0,
+    "math_percent":16,
+    "score":1,
+    "Total":0,
+    "CHN":0,
+    "FIL":0,
+    "GEN":0,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":9,
+    "RequestsTotal":658,
+    "RequestsFirst":66
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4443046,37.7697955 ]
+    },
+    "properties": {
+    "school_name":"Chinese Immersion School at De Avila",
+    "grades":"Grades K-5",
+    "neighb":"Haight Ashbury",
+    "address":"1250 Waller Street",
+    "eng_percent":88,
+    "math_percent":84,
+    "score":10,
+    "Total":645,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1,
+    "IMMC":644,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":66,
+    "RequestsTotal":645,
+    "RequestsFirst":80
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4433826,37.8032774 ]
+    },
+    "properties": {
+    "school_name":"Claire Lilienthal (3-8 Winfield Scott Campus)",
+    "grades":"Grades K-8",
+    "neighb":"Marina",
+    "address":"3630 Divisadero Street",
+    "eng_percent":79,
+    "math_percent":77,
+    "score":10,
+    "Total":1465,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1111,
+    "IMMC":0,
+    "IMMK":354,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":86,
+    "RequestsTotal":1465,
+    "RequestsFirst":191
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4579983,37.7871537 ]
+    },
+    "properties": {
+    "school_name":"Claire Lilienthal (K-2 Madison Campus)",
+    "grades":"Grades K-8",
+    "neighb":"Inner Richmond",
+    "address":"3950 Sacramento Street",
+    "eng_percent":79,
+    "math_percent":77,
+    "score":10,
+    "Total":1465,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1111,
+    "IMMC":0,
+    "IMMK":354,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":86,
+    "RequestsTotal":1465,
+    "RequestsFirst":191
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4561658,37.7536422 ]
+    },
+    "properties": {
+    "school_name":"Clarendon Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Inner Sunset",
+    "address":"500 Clarendon Avenue",
+    "eng_percent":77,
+    "math_percent":75,
+    "score":10,
+    "Total":2313,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1624,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":689,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":91,
+    "RequestsTotal":2313,
+    "RequestsFirst":243
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4291005,37.7207726 ]
+    },
+    "properties": {
+    "school_name":"Cleveland Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Excelsior",
+    "address":"455 Athens Street",
+    "eng_percent":19,
+    "math_percent":20,
+    "score":2,
+    "Total":222,
+    "CHN":0,
+    "FIL":0,
+    "GEN":165,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":57,
+    "KAdmitted":66,
+    "RequestsTotal":222,
+    "RequestsFirst":32
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.47091,37.7315894 ]
+    },
+    "properties": {
+    "school_name":"Commodore Sloat Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"West of Twin Peaks",
+    "address":"50 Darien Way",
+    "eng_percent":64,
+    "math_percent":59,
+    "score":7,
+    "Total":1007,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1007,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":66,
+    "RequestsTotal":1007,
+    "RequestsFirst":71
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.3958785,37.76067 ]
+    },
+    "properties": {
+    "school_name":"Daniel Webster Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Potrero Hill",
+    "address":"465 Missouri Street",
+    "eng_percent":25,
+    "math_percent":21,
+    "score":3,
+    "Total":517,
+    "CHN":0,
+    "FIL":0,
+    "GEN":235,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":282,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":55,
+    "RequestsTotal":517,
+    "RequestsFirst":46
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4815483,37.7396648 ]
+    },
+    "properties": {
+    "school_name":"Dianne Feinstein Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Parkside",
+    "address":"2550 25th Avenue",
+    "eng_percent":64,
+    "math_percent":64,
+    "score":8,
+    "Total":1026,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1026,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":86,
+    "RequestsTotal":1026,
+    "RequestsFirst":86
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.3939155,37.7317944 ]
+    },
+    "properties": {
+    "school_name":"Dr. Charles R. Drew Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Bayview",
+    "address":"50 Pomona Avenue",
+    "eng_percent":10,
+    "math_percent":5,
+    "score":1,
+    "Total":132,
+    "CHN":0,
+    "FIL":0,
+    "GEN":132,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":34,
+    "RequestsTotal":132,
+    "RequestsFirst":19
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4395819,37.7876864 ]
+    },
+    "properties": {
+    "school_name":"Dr. William L. Cobb Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Western Addition",
+    "address":"2725 California Street",
+    "eng_percent":19,
+    "math_percent":16,
+    "score":1,
+    "Total":163,
+    "CHN":0,
+    "FIL":0,
+    "GEN":163,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":26,
+    "RequestsTotal":163,
+    "RequestsFirst":7
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4075501,37.7277831 ]
+    },
+    "properties": {
+    "school_name":"E.R. Taylor Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Excelsior",
+    "address":"423 Burrows Street",
+    "eng_percent":43,
+    "math_percent":47,
+    "score":5,
+    "Total":607,
+    "CHN":128,
+    "FIL":0,
+    "GEN":430,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":49,
+    "KAdmitted":108,
+    "RequestsTotal":607,
+    "RequestsFirst":133
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4075482,37.7184012 ]
+    },
+    "properties": {
+    "school_name":"El Dorado Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Visitacion Valley",
+    "address":"70 Delta Street",
+    "eng_percent":26,
+    "math_percent":19,
+    "score":2,
+    "Total":105,
+    "CHN":0,
+    "FIL":0,
+    "GEN":105,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":35,
+    "RequestsTotal":105,
+    "RequestsFirst":5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4248397,37.7402134 ]
+    },
+    "properties": {
+    "school_name":"Fairmount Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Glen Park",
+    "address":"65 Chenery Street",
+    "eng_percent":27,
+    "math_percent":23,
+    "score":3,
+    "Total":584,
+    "CHN":0,
+    "FIL":0,
+    "GEN":0,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":584,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":63,
+    "RequestsTotal":584,
+    "RequestsFirst":75
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.5020033,37.7582726 ]
+    },
+    "properties": {
+    "school_name":"Francis Scott Key Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Outer Sunset",
+    "address":"1530 43rd Avenue",
+    "eng_percent":64,
+    "math_percent":68,
+    "score":8,
+    "Total":833,
+    "CHN":0,
+    "FIL":0,
+    "GEN":833,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":88,
+    "RequestsTotal":833,
+    "RequestsFirst":67
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4643203,37.7761741 ]
+    },
+    "properties": {
+    "school_name":"Frank McCoppin Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Inner Richmond",
+    "address":"651 6th Avenue",
+    "eng_percent":73,
+    "math_percent":72,
+    "score":9,
+    "Total":455,
+    "CHN":0,
+    "FIL":0,
+    "GEN":455,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":44,
+    "RequestsTotal":455,
+    "RequestsFirst":8
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4067833,37.8019401 ]
+    },
+    "properties": {
+    "school_name":"Garfield Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"North Beach",
+    "address":"420 Filbert Street",
+    "eng_percent":43,
+    "math_percent":53,
+    "score":6,
+    "Total":511,
+    "CHN":0,
+    "FIL":0,
+    "GEN":330,
+    "IMMC":181,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":44,
+    "RequestsTotal":511,
+    "RequestsFirst":12
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.412662,37.7564757 ]
+    },
+    "properties": {
+    "school_name":"George Moscone Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Mission",
+    "address":"2576 Harrison Street",
+    "eng_percent":45,
+    "math_percent":46,
+    "score":5,
+    "Total":401,
+    "CHN":26,
+    "FIL":0,
+    "GEN":254,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":121,
+    "KAdmitted":64,
+    "RequestsTotal":403,
+    "RequestsFirst":59
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4651034,37.7838537 ]
+    },
+    "properties": {
+    "school_name":"George Peabody Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Inner Richmond",
+    "address":"251 6th Avenue",
+    "eng_percent":77,
+    "math_percent":72,
+    "score":9,
+    "Total":1188,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1175,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":13,
+    "SPN":0,
+    "KAdmitted":47,
+    "RequestsTotal":1188,
+    "RequestsFirst":134
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.435632,37.7331499 ]
+    },
+    "properties": {
+    "school_name":"Glen Park Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Outer Mission",
+    "address":"151 Lippard Avenue",
+    "eng_percent":16,
+    "math_percent":21,
+    "score":2,
+    "Total":593,
+    "CHN":0,
+    "FIL":0,
+    "GEN":538,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":55,
+    "KAdmitted":62,
+    "RequestsTotal":593,
+    "RequestsFirst":45
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4094711,37.7939734 ]
+    },
+    "properties": {
+    "school_name":"Gordon J. Lau Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Chinatown",
+    "address":"950 Clay Street",
+    "eng_percent":52,
+    "math_percent":58,
+    "score":7,
+    "Total":491,
+    "CHN":134,
+    "FIL":0,
+    "GEN":357,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":120,
+    "RequestsTotal":491,
+    "RequestsFirst":76
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4504949,37.7636166 ]
+    },
+    "properties": {
+    "school_name":"Grattan Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Haight Ashbury",
+    "address":"165 Grattan Street",
+    "eng_percent":72,
+    "math_percent":63,
+    "score":8,
+    "Total":1448,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1448,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":65,
+    "RequestsTotal":1448,
+    "RequestsFirst":188
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4341901,37.7101928 ]
+    },
+    "properties": {
+    "school_name":"Guadalupe Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Crocker Amazon",
+    "address":"859 Prague Street",
+    "eng_percent":22,
+    "math_percent":18,
+    "score":2,
+    "Total":230,
+    "CHN":0,
+    "FIL":0,
+    "GEN":174,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":56,
+    "KAdmitted":71,
+    "RequestsTotal":230,
+    "RequestsFirst":35
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4364841,37.7590234 ]
+    },
+    "properties": {
+    "school_name":"Harvey Milk Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Castro/Upper Market",
+    "address":"4235 19th Street",
+    "eng_percent":46,
+    "math_percent":35,
+    "score":5,
+    "Total":519,
+    "CHN":0,
+    "FIL":0,
+    "GEN":519,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":44,
+    "RequestsTotal":519,
+    "RequestsFirst":21
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4189329,37.7287815 ]
+    },
+    "properties": {
+    "school_name":"Hillcrest Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Excelsior",
+    "address":"810 Silver Avenue",
+    "eng_percent":29,
+    "math_percent":31,
+    "score":4,
+    "Total":308,
+    "CHN":34,
+    "FIL":0,
+    "GEN":214,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":10,
+    "SPN":50,
+    "KAdmitted":86,
+    "RequestsTotal":308,
+    "RequestsFirst":37
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4113092,37.7974664 ]
+    },
+    "properties": {
+    "school_name":"Jean Parker Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Russian Hill",
+    "address":"840 Broadway Street",
+    "eng_percent":37,
+    "math_percent":47,
+    "score":5,
+    "Total":370,
+    "CHN":91,
+    "FIL":0,
+    "GEN":279,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":41,
+    "RequestsTotal":370,
+    "RequestsFirst":28
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4765579,37.7628423 ]
+    },
+    "properties": {
+    "school_name":"Jefferson Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Inner Sunset",
+    "address":"1725 Irving Street",
+    "eng_percent":72,
+    "math_percent":64,
+    "score":9,
+    "Total":1172,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1172,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":85,
+    "RequestsTotal":1172,
+    "RequestsFirst":66
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4287458,37.7737799 ]
+    },
+    "properties": {
+    "school_name":"John Muir Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Western Addition",
+    "address":"380 Webster Street",
+    "eng_percent":21,
+    "math_percent":15,
+    "score":1,
+    "Total":177,
+    "CHN":0,
+    "FIL":0,
+    "GEN":154,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":23,
+    "KAdmitted":42,
+    "RequestsTotal":177,
+    "RequestsFirst":21
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4031294,37.7986206 ]
+    },
+    "properties": {
+    "school_name":"John Yehall Chin Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"North Beach",
+    "address":"350 Broadway",
+    "eng_percent":71,
+    "math_percent":76,
+    "score":9,
+    "Total":658,
+    "CHN":140,
+    "FIL":0,
+    "GEN":518,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":44,
+    "RequestsTotal":658,
+    "RequestsFirst":66
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4669559,37.716573 ]
+    },
+    "properties": {
+    "school_name":"Jose Ortega Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Ocean View",
+    "address":"400 Sargent Street",
+    "eng_percent":55,
+    "math_percent":60,
+    "score":7,
+    "Total":783,
+    "CHN":0,
+    "FIL":0,
+    "GEN":418,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":365,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":67,
+    "RequestsTotal":783,
+    "RequestsFirst":87
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4213918,37.7368919 ]
+    },
+    "properties": {
+    "school_name":"Junipero Serra Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Bernal Heights",
+    "address":"625 Holly Park Circle",
+    "eng_percent":47,
+    "math_percent":50,
+    "score":6,
+    "Total":219,
+    "CHN":0,
+    "FIL":0,
+    "GEN":170,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":49,
+    "KAdmitted":44,
+    "RequestsTotal":219,
+    "RequestsFirst":24
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4968949,37.7770653 ]
+    },
+    "properties": {
+    "school_name":"Lafayette Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Outer Richmond",
+    "address":"4545 Anza Street",
+    "eng_percent":78,
+    "math_percent":80,
+    "score":10,
+    "Total":951,
+    "CHN":0,
+    "FIL":0,
+    "GEN":951,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":85,
+    "RequestsTotal":951,
+    "RequestsFirst":91
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4852876,37.7304324 ]
+    },
+    "properties": {
+    "school_name":"Lakeshore Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Lakeshore",
+    "address":"220 Middlefield Drive",
+    "eng_percent":42,
+    "math_percent":36,
+    "score":4,
+    "Total":510,
+    "CHN":0,
+    "FIL":0,
+    "GEN":510,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":86,
+    "RequestsTotal":510,
+    "RequestsFirst":31
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4890188,37.7582345 ]
+    },
+    "properties": {
+    "school_name":"Lawton Alternative School (K8)",
+    "grades":"Grades K-8",
+    "neighb":"Outer Sunset",
+    "address":"1570 31st Avenue",
+    "eng_percent":78,
+    "math_percent":82,
+    "score":10,
+    "Total":1355,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1355,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":66,
+    "RequestsTotal":1355,
+    "RequestsFirst":144
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4117931,37.7478081 ]
+    },
+    "properties": {
+    "school_name":"Leonard Flynn Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Bernal Heights",
+    "address":"3125 Cesar Chavez Street",
+    "eng_percent":23,
+    "math_percent":19,
+    "score":2,
+    "Total":527,
+    "CHN":0,
+    "FIL":0,
+    "GEN":223,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":304,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":73,
+    "RequestsTotal":527,
+    "RequestsFirst":32
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.446951,37.7107704 ]
+    },
+    "properties": {
+    "school_name":"Longfellow Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Crocker Amazon",
+    "address":"755 Morse Street",
+    "eng_percent":38,
+    "math_percent":36,
+    "score":4,
+    "Total":246,
+    "CHN":0,
+    "FIL":0,
+    "GEN":207,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":39,
+    "KAdmitted":85,
+    "RequestsTotal":246,
+    "RequestsFirst":39
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.3809803,37.7338909 ]
+    },
+    "properties": {
+    "school_name":"Malcolm X Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Bayview",
+    "address":"350 Harbor Road",
+    "eng_percent":14,
+    "math_percent":26,
+    "score":2,
+    "Total":84,
+    "CHN":0,
+    "FIL":0,
+    "GEN":84,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":15,
+    "RequestsTotal":84,
+    "RequestsFirst":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4189189,37.7661381 ]
+    },
+    "properties": {
+    "school_name":"Marshall Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Mission",
+    "address":"1575 15th Street",
+    "eng_percent":30,
+    "math_percent":24,
+    "score":3,
+    "Total":366,
+    "CHN":0,
+    "FIL":0,
+    "GEN":0,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":366,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":43,
+    "RequestsTotal":366,
+    "RequestsFirst":46
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4365209,37.7669543 ]
+    },
+    "properties": {
+    "school_name":"McKinley Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Castro/Upper Market",
+    "address":"1025 14th Street",
+    "eng_percent":67,
+    "math_percent":57,
+    "score":7,
+    "Total":1106,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1106,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":66,
+    "RequestsTotal":1106,
+    "RequestsFirst":78
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4500614,37.738722 ]
+    },
+    "properties": {
+    "school_name":"Miraloma Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"West of Twin Peaks",
+    "address":"175 Omar Way",
+    "eng_percent":69,
+    "math_percent":70,
+    "score":9,
+    "Total":1154,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1140,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":14,
+    "SPN":0,
+    "KAdmitted":68,
+    "RequestsTotal":1154,
+    "RequestsFirst":97
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4314808,37.7422066 ]
+    },
+    "properties": {
+    "school_name":"Mission Education Center Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Noe Valley",
+    "address":"1670 Noe Street",
+    "eng_percent":0,
+    "math_percent":0,
+    "score":1,
+    "Total":0,
+    "CHN":0,
+    "FIL":0,
+    "GEN":0,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":15,
+    "RequestsTotal":3,
+    "RequestsFirst":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4304913,37.7253862 ]
+    },
+    "properties": {
+    "school_name":"Monroe Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Excelsior",
+    "address":"260 Madrid Street",
+    "eng_percent":49,
+    "math_percent":52,
+    "score":6,
+    "Total":778,
+    "CHN":86,
+    "FIL":0,
+    "GEN":352,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":340,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":87,
+    "RequestsTotal":778,
+    "RequestsFirst":107
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4503932,37.7743138 ]
+    },
+    "properties": {
+    "school_name":"New Traditions Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Haight Ashbury",
+    "address":"2049 Grove Street",
+    "eng_percent":68,
+    "math_percent":67,
+    "score":8,
+    "Total":896,
+    "CHN":0,
+    "FIL":0,
+    "GEN":896,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":43,
+    "RequestsTotal":896,
+    "RequestsFirst":40
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4131319,37.7373495 ]
+    },
+    "properties": {
+    "school_name":"Paul Revere (PreK-8) School",
+    "grades":"PreK-8",
+    "neighb":"Bernal Heights",
+    "address":"555 Tompkins Avenue",
+    "eng_percent":18,
+    "math_percent":24,
+    "score":2,
+    "Total":388,
+    "CHN":0,
+    "FIL":0,
+    "GEN":180,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":208,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":64,
+    "RequestsTotal":388,
+    "RequestsFirst":22
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4192423,37.789525 ]
+    },
+    "properties": {
+    "school_name":"Redding Elementary School",
+    "grades":"TK-5",
+    "neighb":"Nob Hill",
+    "address":"1421 Pine Street",
+    "eng_percent":45,
+    "math_percent":32,
+    "score":4,
+    "Total":262,
+    "CHN":0,
+    "FIL":0,
+    "GEN":262,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":41,
+    "RequestsTotal":262,
+    "RequestsFirst":30
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4922613,37.7488622 ]
+    },
+    "properties": {
+    "school_name":"Robert Louis Stevenson Elementary School",
+    "grades":"TK-5",
+    "neighb":"Outer Sunset",
+    "address":"2051 34th Avenue",
+    "eng_percent":67,
+    "math_percent":71,
+    "score":9,
+    "Total":947,
+    "CHN":0,
+    "FIL":0,
+    "GEN":936,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":11,
+    "SPN":0,
+    "KAdmitted":85,
+    "RequestsTotal":947,
+    "RequestsFirst":42
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4446907,37.7575354 ]
+    },
+    "properties": {
+    "school_name":"Rooftop (PreK-8) School (5-8 Mayeda Campus)",
+    "grades":"PreK-8",
+    "neighb":"Twin Peaks",
+    "address":"500 Corbett Avenue",
+    "eng_percent":52,
+    "math_percent":50,
+    "score":6,
+    "Total":1432,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1432,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":65,
+    "RequestsTotal":1432,
+    "RequestsFirst":180
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4439716,37.7544104 ]
+    },
+    "properties": {
+    "school_name":"Rooftop (PreK-8) School (PreK-4 Burnett Campus)",
+    "grades":"PreK-8",
+    "neighb":"Twin Peaks",
+    "address":"443 Burnett Street",
+    "eng_percent":52,
+    "math_percent":50,
+    "score":6,
+    "Total":1432,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1432,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":65,
+    "RequestsTotal":1432,
+    "RequestsFirst":180
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4297502,37.7832117 ]
+    },
+    "properties": {
+    "school_name":"Rosa Parks Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Western Addition",
+    "address":"1501 O'Farrell Street",
+    "eng_percent":49,
+    "math_percent":46,
+    "score":5,
+    "Total":640,
+    "CHN":0,
+    "FIL":0,
+    "GEN":361,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":279,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":78,
+    "RequestsTotal":640,
+    "RequestsFirst":58
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4322202,37.7259976 ]
+    },
+    "properties": {
+    "school_name":"S.F. Community (K-8) School",
+    "grades":"Grades K-8",
+    "neighb":"Excelsior",
+    "address":"125 Excelsior Avenue",
+    "eng_percent":33,
+    "math_percent":27,
+    "score":4,
+    "Total":338,
+    "CHN":0,
+    "FIL":0,
+    "GEN":338,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":33,
+    "RequestsTotal":338,
+    "RequestsFirst":20
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4335145,37.7928842 ]
+    },
+    "properties": {
+    "school_name":"S.F. Public Montessori Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Pacific Heights",
+    "address":"2340 Jackson Street",
+    "eng_percent":68,
+    "math_percent":50,
+    "score":7,
+    "Total":583,
+    "CHN":0,
+    "FIL":0,
+    "GEN":583,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":41,
+    "RequestsTotal":583,
+    "RequestsFirst":41
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4305102,37.7634673 ]
+    },
+    "properties": {
+    "school_name":"Sanchez Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Castro/Upper Market",
+    "address":"325 Sanchez Street",
+    "eng_percent":24,
+    "math_percent":27,
+    "score":3,
+    "Total":189,
+    "CHN":0,
+    "FIL":0,
+    "GEN":189,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":51,
+    "RequestsTotal":189,
+    "RequestsFirst":9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4597756,37.7146245 ]
+    },
+    "properties": {
+    "school_name":"Sheridan Elementary School",
+    "grades":"PreK/TK-5",
+    "neighb":"Ocean View",
+    "address":"431 Capitol Avenue",
+    "eng_percent":26,
+    "math_percent":27,
+    "score":3,
+    "Total":177,
+    "CHN":0,
+    "FIL":0,
+    "GEN":177,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":42,
+    "RequestsTotal":177,
+    "RequestsFirst":14
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4261333,37.7979984 ]
+    },
+    "properties": {
+    "school_name":"Sherman Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Marina",
+    "address":"1651 Union Street",
+    "eng_percent":68,
+    "math_percent":67,
+    "score":8,
+    "Total":892,
+    "CHN":0,
+    "FIL":0,
+    "GEN":892,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":67,
+    "RequestsTotal":892,
+    "RequestsFirst":116
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4188655,37.7940556 ]
+    },
+    "properties": {
+    "school_name":"Spring Valley Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Nob Hill",
+    "address":"1451 Jackson Se",
+    "eng_percent":38,
+    "math_percent":41,
+    "score":5,
+    "Total":382,
+    "CHN":44,
+    "FIL":0,
+    "GEN":303,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":35,
+    "KAdmitted":60,
+    "RequestsTotal":382,
+    "RequestsFirst":37
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.3989393,37.7533196 ]
+    },
+    "properties": {
+    "school_name":"Starr King Elementary School",
+    "grades":"PreK-5",
+    "neighb":"Potrero Hill",
+    "address":"1215 Carolina Street",
+    "eng_percent":46,
+    "math_percent":44,
+    "score":5,
+    "Total":507,
+    "CHN":0,
+    "FIL":0,
+    "GEN":208,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":299,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":62,
+    "RequestsTotal":299,
+    "RequestsFirst":36
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4483426,37.7302989 ]
+    },
+    "properties": {
+    "school_name":"Sunnyside Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Outer Mission",
+    "address":"250 Foerster Street",
+    "eng_percent":54,
+    "math_percent":50,
+    "score":6,
+    "Total":828,
+    "CHN":0,
+    "FIL":0,
+    "GEN":828,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":66,
+    "RequestsTotal":828,
+    "RequestsFirst":115
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4998783,37.7507527 ]
+    },
+    "properties": {
+    "school_name":"Sunset Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Outer Sunset",
+    "address":"1920 41st Avenue",
+    "eng_percent":83,
+    "math_percent":82,
+    "score":10,
+    "Total":1255,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1255,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":68,
+    "RequestsTotal":1255,
+    "RequestsFirst":137
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4713293,37.7835449 ]
+    },
+    "properties": {
+    "school_name":"Sutro Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Inner Richmond",
+    "address":"235 12th Avenue",
+    "eng_percent":59,
+    "math_percent":64,
+    "score":8,
+    "Total":727,
+    "CHN":60,
+    "FIL":0,
+    "GEN":667,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":42,
+    "RequestsTotal":727,
+    "RequestsFirst":25
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4198584,37.7818705 ]
+    },
+    "properties": {
+    "school_name":"Tenderloin Elementary School",
+    "grades":"PreK/TK-5",
+    "neighb":"Downtown/Civic Center",
+    "address":"627 Turk Street",
+    "eng_percent":29,
+    "math_percent":25,
+    "score":3,
+    "Total":156,
+    "CHN":0,
+    "FIL":0,
+    "GEN":156,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":54,
+    "RequestsTotal":156,
+    "RequestsFirst":29
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4998967,37.7372915 ]
+    },
+    "properties": {
+    "school_name":"Ulloa Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Parkside",
+    "address":"2650 42nd Avenue",
+    "eng_percent":79,
+    "math_percent":87,
+    "score":10,
+    "Total":1168,
+    "CHN":202,
+    "FIL":0,
+    "GEN":966,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":88,
+    "RequestsTotal":1168,
+    "RequestsFirst":95
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4098393,37.7124769 ]
+    },
+    "properties": {
+    "school_name":"Visitacion Valley Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Visitacion Valley",
+    "address":"55 Schwerin Street",
+    "eng_percent":46,
+    "math_percent":49,
+    "score":6,
+    "Total":194,
+    "CHN":31,
+    "FIL":0,
+    "GEN":163,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":62,
+    "RequestsTotal":194,
+    "RequestsFirst":36
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4646366,37.7436078 ]
+    },
+    "properties": {
+    "school_name":"West Portal Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"West of Twin Peaks",
+    "address":"5 Lenox Way",
+    "eng_percent":59,
+    "math_percent":63,
+    "score":7,
+    "Total":2039,
+    "CHN":0,
+    "FIL":0,
+    "GEN":1368,
+    "IMMC":671,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":99,
+    "RequestsTotal":2039,
+    "RequestsFirst":123
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4164239,37.8022272 ]
+    },
+    "properties": {
+    "school_name":"Yick Wo Elementary School",
+    "grades":"Grades K-5",
+    "neighb":"Russian Hill",
+    "address":"2245 Jones Street",
+    "eng_percent":48,
+    "math_percent":52,
+    "score":6,
+    "Total":480,
+    "CHN":0,
+    "FIL":0,
+    "GEN":480,
+    "IMMC":0,
+    "IMMK":0,
+    "IMMM":0,
+    "IMMS":0,
+    "JPN":0,
+    "MM":0,
+    "SPN":0,
+    "KAdmitted":46,
+    "RequestsTotal":480,
+    "RequestsFirst":35
+    }
+  }
+]
+}
