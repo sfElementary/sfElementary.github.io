@@ -32,8 +32,9 @@
       }
       a.one:link {color:#46673b;} /* for re-coloring link text to pleasant green */
 
-      .legend { text-align: left; line-height: 18px; color: #555; } 
+      .legend { text-align: left; line-height: 18px; color: #555; width:300px;} 
       .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
+      .legendMobile { text-align: left; line-height: 18px; color: #555; width:500px;} 
 
       .tabIndent { margin-left: 40px; }
 
@@ -215,32 +216,32 @@ info.shortUpdate = function (props) {
     displayString = '<h3> About this project</h3>';
     displayString += '<forceFont> This project maps San Francisco Elementary school data. The color of a circle shows the school\'s CAASPP test scores (darker is better).';
     displayString += ' </b><br /> </br><br />'
-                  + 'San Francisco\'s school lottery system is tough to explain. Here are some attempts: <a href=\"http://www.sfkfiles.com/2013/04/how-to-play-san-francisco-school.html\" class=\"one\" target=\"_newtab\"> a blog post </a>, <a class=\"one\" href=\"http://blog.pacificunion.com/san-francisco-public-school-lottery/\" target=\"_newtab\"> another blog post </a>, <a class=\"one\" href=\"http://www.sfusd.edu/en/assets/sfusd-staff/enroll/files/2012-13/Assignment-Transfer%20process%20explained.pdf\" target=\"_newtab\"> official PDF </a></forceFont>';
+                  + 'San Francisco\'s school lottery system is tough to explain. Here are some attempts: <a href=\"http://www.sfkfiles.com/2013/04/how-to-play-san-francisco-school.html\" target=\"_newtab\"> a blog post </a>, <a c href=\"http://blog.pacificunion.com/san-francisco-public-school-lottery/\" target=\"_newtab\"> another blog post </a>, <a  href=\"http://www.sfusd.edu/en/assets/sfusd-staff/enroll/files/2012-13/Assignment-Transfer%20process%20explained.pdf\" target=\"_newtab\"> official PDF </a></forceFont>';
     this._div.innerHTML = displayString  ;
   }
 
   info.dataUpdate = function () {
     var displayString;
     displayString = '<h3> Data used </h3>';
-    displayString += 'We got the enrollment data from the <a class=\"one\" href=\"http://dq.cde.ca.gov/dataquest/Enrollment/GradeEnr.aspx?cChoice=DistEnrGr2&cYear=2015-16&cSelect=3868478--San%20Francisco%20Unified&TheCounty=&cLevel=District&cTopic=Enrollment&myTimeFrame=S&cType=ALL&cGender=B\)"> California Department of Education</a>. </b><br />';
+    displayString += 'We got the enrollment data from the <a href=\"http://dq.cde.ca.gov/dataquest/Enrollment/GradeEnr.aspx?cChoice=DistEnrGr2&cYear=2015-16&cSelect=3868478--San%20Francisco%20Unified&TheCounty=&cLevel=District&cTopic=Enrollment&myTimeFrame=S&cType=ALL&cGender=B\)"> California Department of Education</a>. </b><br />';
     displayString += '</b><br />CAASPP information came from the same site.</b><br />';
-    displayString += '</b><br /> Number of requests came from the <a href=\"http://www.sfusd.edu/en/assets/sfusd-staff/enroll/files/2016-17/Report_Requests.pdf\" class=\"one\">SF Unified School District</a>.';
+    displayString += '</b><br /> Number of requests came from the <a href=\"http://www.sfusd.edu/en/assets/sfusd-staff/enroll/files/2016-17/Report_Requests.pdf\">SF Unified School District</a>.';
     this._div.innerHTML = displayString  ;
   }
 
   info.authorsUpdate = function () {
     var displayString;
     displayString = '<h3> Authors </h3>';
-    displayString += '<a class=\"one\" href=\"https://www.linkedin.com/in/morgan-whitmont-19547a66\" target=\"_newtab\">Morgan Whitmont</a> wrote code and designed the site. </b><br />';
+    displayString += '<a href=\"https://www.linkedin.com/in/morgan-whitmont-19547a66\" target=\"_newtab\">Morgan Whitmont</a> wrote code and designed the site. </b><br />';
     displayString += '</b><br />';
-    displayString += '<a class=\"one\" href= \"https://www.usfca.edu/faculty/yannet-interian\" target=\"_newtab\">Yannet Interian</a> envisioned this project and gathered data. She is an Assistant Professor at University of San Francisco and is currently teaching full time for USF\'s Masters Program in Analytics.';
+    displayString += '<a href= \"https://www.usfca.edu/faculty/yannet-interian\" target=\"_newtab\">Yannet Interian</a> envisioned this project and gathered data. She is an Assistant Professor at University of San Francisco and is currently teaching full time for USF\'s Masters Program in Analytics.';
     this._div.innerHTML = displayString  ;
   }
 
   info.caasppUpdate = function() {
     var displayString;
     displayString = '<h3> What is CAASPP? </h3>';
-    displayString += 'CAASPP (California Assessment of Student Performance and Progress) are annual tests. There are two tests: English and Math. </b><br /></b><br />';
+    displayString += 'CAASPP (California Assessment of Student Performance and Progress) is an annual test. There are two parts: Math and English. </b><br /></b><br />';
 
     displayString += 'In 2015-2016, 39% of grade-school children had passing scores in Math </b><br />';
     displayString += 'In 2015-2016, 45% of grade-school children had passing scores in English </b><br />';
@@ -268,7 +269,13 @@ function getColor(d) { // from colorbrewer2.org
 var legend = L.control({position: 'bottomright'});
   legend.onAdd = function (map) {
 
-    var div = L.DomUtil.create('div', 'info legend');
+    // check if mobile
+    if(typeof window.orientation !== 'undefined') { 
+        var div = L.DomUtil.create('div', 'info legendMobile');
+      } 
+    else {
+      var div = L.DomUtil.create('div', 'info legend');
+    }
     var string1 = "<li><a class=\"tablinks\" onclick=\"info.aboutUpdate()\">About</a></li> ";
     var string2 = "<li><a class=\"tablinks\" onclick=\"info.dataUpdate()\">Data</a></li>";
     var string3 = " <li><a class=\"tablinks\" onclick=\"info.authorsUpdate()\">Authors</a></li>";
