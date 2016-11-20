@@ -16,7 +16,7 @@
             height: 100%;
             width: 100%;
         }
-      #map { width: 100%; height: 85%; }
+      #map { width: 100%; height: 100%; }
 
       .info { text-align: left; padding: 6px 8px; font: 140% Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:300px; word-wrap:break-word;word-wrap: break-word;} 
       .infoMobile { text-align: left; padding: 6px 8px; font: 250% Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:500px; word-wrap:break-word;word-wrap: break-word;} 
@@ -46,7 +46,7 @@
           overflow: hidden;
           border: 0px solid #ccc;
           border-top: 0px;
-          background-color: #eee5dc; 
+          /* background-color: white; */
       }
 
       /* Float the list items side by side */
@@ -57,7 +57,7 @@
           display: inline-block;
           color: black;
           text-align: center;
-          padding: 2px 16px;
+          padding: 2px 8px;
           margin: 0px;
           border: 0px;
           border-top: none;
@@ -117,7 +117,7 @@
     else{
       var map = L.map('map').setView([37.774, -122.435], 13);
       $("map").height($(window).height()).width($(window).width());
-map.invalidateSize();
+      map.invalidateSize();
     }
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -210,6 +210,46 @@ info.shortUpdate = function (props) {
           : 'Hover over a school');
   };
 
+  info.aboutUpdate = function () {
+    var displayString;
+    displayString = '<h3> About this project</h3>';
+    displayString += '<forceFont> This project maps San Francisco Elementary school data. The color of a circle shows the school\'s CAASPP test scores (darker is better).';
+    displayString += ' </b><br /> </br><br />'
+                  + 'San Francisco\'s school lottery system is tough to explain. Here are some attempts: <a href=\"http://www.sfkfiles.com/2013/04/how-to-play-san-francisco-school.html\" class=\"one\" target=\"_newtab\"> a blog post </a>, <a class=\"one\" href=\"http://blog.pacificunion.com/san-francisco-public-school-lottery/\" target=\"_newtab\"> another blog post </a>, <a class=\"one\" href=\"http://www.sfusd.edu/en/assets/sfusd-staff/enroll/files/2012-13/Assignment-Transfer%20process%20explained.pdf\" target=\"_newtab\"> official PDF </a></forceFont>';
+    this._div.innerHTML = displayString  ;
+  }
+
+  info.dataUpdate = function () {
+    var displayString;
+    displayString = '<h3> Data used </h3>';
+    displayString += 'We got the enrollment data from the <a class=\"one\" href=\"http://dq.cde.ca.gov/dataquest/Enrollment/GradeEnr.aspx?cChoice=DistEnrGr2&cYear=2015-16&cSelect=3868478--San%20Francisco%20Unified&TheCounty=&cLevel=District&cTopic=Enrollment&myTimeFrame=S&cType=ALL&cGender=B\)"> California Department of Education</a>. </b><br />';
+    displayString += '</b><br />CAASPP information came from the same site.</b><br />';
+    displayString += '</b><br /> Number of requests came from the <a href=\"http://www.sfusd.edu/en/assets/sfusd-staff/enroll/files/2016-17/Report_Requests.pdf\" class=\"one\">SF Unified School District</a>.';
+    this._div.innerHTML = displayString  ;
+  }
+
+  info.authorsUpdate = function () {
+    var displayString;
+    displayString = '<h3> Authors </h3>';
+    displayString += '<a class=\"one\" href=\"https://www.linkedin.com/in/morgan-whitmont-19547a66\" target=\"_newtab\">Morgan Whitmont</a> wrote code and designed the site. </b><br />';
+    displayString += '</b><br />';
+    displayString += '<a class=\"one\" href= \"https://www.usfca.edu/faculty/yannet-interian\" target=\"_newtab\">Yannet Interian</a> envisioned this project and gathered data. She is an Assistant Professor at University of San Francisco and is currently teaching full time for USF\'s Masters Program in Analytics.';
+    this._div.innerHTML = displayString  ;
+  }
+
+  info.caasppUpdate = function() {
+    var displayString;
+    displayString = '<h3> What is CAASPP? </h3>';
+    displayString += 'CAASPP (California Assessment of Student Performance and Progress) are annual tests. There are two tests: English and Math. </b><br /></b><br />';
+
+    displayString += 'In 2015-2016, 39% of grade-school children had passing scores in Math </b><br />';
+    displayString += 'In 2015-2016, 45% of grade-school children had passing scores in English </b><br />';
+    
+    displayString += '</b><br />More information is available on the <a href=\"http://www.cde.ca.gov/nr/ne/yr16/yr16rel57.asp#Table1"> California Dept of Education website. </a>';
+    this._div.innerHTML = displayString  ;
+  }
+
+
 info.addTo(map);
 
 function getColor(d) { // from colorbrewer2.org
@@ -223,6 +263,24 @@ function getColor(d) { // from colorbrewer2.org
            d > 2  ? '#f7fcb9' :
                     '#ffffe5';
 }
+
+// trying new button stuff
+var legend = L.control({position: 'bottomright'});
+  legend.onAdd = function (map) {
+
+    var div = L.DomUtil.create('div', 'info legend');
+    var string1 = "<li><a class=\"tablinks\" onclick=\"info.aboutUpdate()\">About</a></li> ";
+    var string2 = "<li><a class=\"tablinks\" onclick=\"info.dataUpdate()\">Data</a></li>";
+    var string3 = " <li><a class=\"tablinks\" onclick=\"info.authorsUpdate()\">Authors</a></li>";
+    var string4 = "<li><a class=\"tablinks\" onclick=\"info.caasppUpdate()\">CAASPP?</a></li>";
+    div.innerHTML = '<ul class=\"tab\"> ' + string1 + string2 + string3 + string4 + '</ul>';
+
+    return div;
+  };
+
+  legend.addTo(map);
+
+// 
 
 // load GeoJSON from an external file
 $.getJSON("schoolsWithEnrollment.geojson",function(data){
@@ -269,40 +327,11 @@ function openBottomTab(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+
 </script>
 
-<ul class="tab">
-   <li><a href="javascript:void(0)" class="tablinks" onclick="openBottomTab(event, 'About')">About</a></li>  
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openBottomTab(event, 'Data')">Data</a></li>
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openBottomTab(event, 'Authors')">Authors</a></li>
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openBottomTab(event, 'CAASPP')">What is CAASPP?</a></li>
-  
-</ul>
 
-<div id="Authors" class="tabcontent"> <forceFont>
-  <a class="one" href="https://www.linkedin.com/in/morgan-whitmont-19547a66" target="_newtab">Morgan Whitmont</a> wrote code and designed the site. </b><br />
-  <a class="one" href= "https://www.usfca.edu/faculty/yannet-interian" target="_newtab">Yannet Interian</a> envisioned this project and gathered data. She is an Assistant Professor at University of San Francisco and is currently teaching full time for USF's Masters Program in Analytics.
-</div>
-
-<div id="Data" class="tabcontent"> <forceFont>
-  We got the enrollment data from the <a class="one" href="http://dq.cde.ca.gov/dataquest/Enrollment/GradeEnr.aspx?cChoice=DistEnrGr2&cYear=2015-16&cSelect=3868478--San%20Francisco%20Unified&TheCounty=&cLevel=District&cTopic=Enrollment&myTimeFrame=S&cType=ALL&cGender=B)"> California Department of Education</a>.
-  CAASPP information came from the same site.</b><br />
-  Number of requests came from the <a href="http://www.sfusd.edu/en/assets/sfusd-staff/enroll/files/2016-17/Report_Requests.pdf" class="one">SF Unified School District</a>.
-</div>
-
-<div id="CAASPP" class="tabcontent"> 
-  <forceFont>
-  In 2015-2016, California tested students using the California Assessment of Student Performance and Progress (CAASPP), administered through the online Smarter Balanced Summative Assessments. These are comprehensive, end-of-year assessments of grade-level learning that measure progress toward college and career readiness. Each test, English language arts/literacy (ELA) and mathematics is comprised of two parts: (1) a computer adaptive test and (2) a performance task; administered within a 12-week window beginning at 66 percent of the instructional year for grades three through eight, or within in a 7-week window beginning at 80 percent of the instructional year for grade eleven. The summative assessments are aligned with the Common Core State Standards (CCSS) for ELA and mathematics. The tests capitalize on the strengths of computer adaptive testing-efficient and precise measurement across the full range of achievement and timely turnaround of results.
-  <p class="font-size-small ptm">Source: <a class="one" href="http://www.cde.ca.gov/nr/ne/yr16/yr16rel57.asp#Table1" target="_newtab">CA Dept. of Education</a></p> 
-  </forceFont>
-</div>
-
-<div id="About" class="tabcontent"> <forceFont>
-  This project maps San Francisco Elementary school data. The color of a circle shows the school's CAASPP test scores (darker is better).
-  </b><br />
-  San Francisco's school lottery system is tough to explain. Here are some attempts: <a href="http://www.sfkfiles.com/2013/04/how-to-play-san-francisco-school.html" class="one" target="_newtab"> a blog post </a>, <a class="one" href="http://blog.pacificunion.com/san-francisco-public-school-lottery/" target="_newtab"> another blog post </a>, <a class="one" href="http://www.sfusd.edu/en/assets/sfusd-staff/enroll/files/2012-13/Assignment-Transfer%20process%20explained.pdf" target="_newtab"> official PDF </a>
-  </forceFont>
-</div>
 
 </body>
 </html>
