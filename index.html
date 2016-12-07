@@ -22,6 +22,7 @@
       .infoMobile { text-align: left; padding: 6px 8px; font: 250% Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; width:500px; word-wrap:break-word;word-wrap: break-word;} 
       .info h4 { margin: 0 0 5px; color: #777; }
       .info h3 { margin: 0 0 5px; color: #777; }
+      
 
       shrinker {  /* used for smaller text */
         font-style: normal;
@@ -36,7 +37,7 @@
       .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
       .legendMobile { text-align: left; line-height: 18px; color: #555; width:500px; font: 250% Arial, Helvetica, sans-serif;} 
 
-      .tabIndent { margin-left: 40px; }
+      .tabIndent { margin-left: 20px; }
 
       /* stuff for bottom tabs */
       ul.tab {
@@ -227,6 +228,11 @@ info.shortUpdate = function (props) {
     displayString += 'We got the enrollment data from the <a href=\"http://dq.cde.ca.gov/dataquest/Enrollment/GradeEnr.aspx?cChoice=DistEnrGr2&cYear=2015-16&cSelect=3868478--San%20Francisco%20Unified&TheCounty=&cLevel=District&cTopic=Enrollment&myTimeFrame=S&cType=ALL&cGender=B\)"> California Department of Education</a>. </b><br />';
     displayString += '</b><br />CAASPP information came from the same site.</b><br />';
     displayString += '</b><br /> Number of requests came from the <a href=\"http://www.sfusd.edu/en/assets/sfusd-staff/enroll/files/2016-17/Report_Requests.pdf\">SF Unified School District</a>.';
+    displayString +='</b><br /></b><br /><h3> Rank Calculation </h3>';
+    displayString += '<shrinker>School score = </b><br> <p class="tabIndent"> (Math% / CA_Math%) + (Eng% / CA_Eng%) </p>';
+    displayString += 'Where Math% is % of kids at the school who pass CAASPP Math, and CA_Math% is the state average (39% in 2016). ';
+    displayString += '</b><br /></b><br />We rank the schools by this "School score" and assign the schools to equal sized categories from 1 to 10.</shrinker>';
+
     this._div.innerHTML = displayString  ;
   }
 
@@ -244,8 +250,8 @@ info.shortUpdate = function (props) {
     displayString = '<h3> What is CAASPP? </h3>';
     displayString += 'CAASPP (California Assessment of Student Performance and Progress) is an annual test. There are two parts: Math and English. </b><br /></b><br />';
 
-    displayString += 'In 2015-2016, 39% of grade-school children had passing scores in Math </b><br />';
-    displayString += 'In 2015-2016, 45% of grade-school children had passing scores in English </b><br />';
+    displayString += 'In 2015-2016, 39% of grade-school children had passing scores in Math. </b><br />';
+    displayString += 'In 2015-2016, 45% of grade-school children had passing scores in English. </b><br />';
     
     displayString += '</b><br />More information is available on the <a href=\"http://www.cde.ca.gov/nr/ne/yr16/yr16rel57.asp#Table1"> California Dept of Education website. </a>';
     this._div.innerHTML = displayString  ;
